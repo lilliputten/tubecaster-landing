@@ -2,6 +2,7 @@
 
 .main-nav {
   background: $light;
+  background: $darkBgColor;
   z-index: 1;
 
   .container {
@@ -9,7 +10,7 @@
   }
 
   .navbar-brand {
-    padding: 10px 0;
+    padding: 1em 0;
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
@@ -51,6 +52,7 @@
         text-transform: uppercase;
         font-weight: 600;
         color: $dark;
+        color: #ccc;
         padding-left: 20px;
         padding-right: 20px;
         line-height: 45px;
@@ -202,6 +204,9 @@
 }
 
 // bootstrap override
+.navbar-toggler {
+  color: $primaryColor;
+}
 .navbar-toggler:focus,
 .navbar-toggler:hover {
   outline: none;

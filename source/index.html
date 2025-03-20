@@ -5,7 +5,7 @@
 <!--====================================
 =            Hero Section            =
 =====================================-->
-<section class="section gradient-banner">
+<section class="HeroSection section gradient-banner">
   <div class="shapes-container">
     <div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
     <div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
@@ -26,7 +26,7 @@
   </div>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+      <div class="col-md-6 order-2 order-md-1 text-center text-md-left my-4">
         <!-- Hero title -->
         <h1 class="activeBasicLinkWrapper text-white _font-weight-bold mb-4">
           Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCaster!</a>
@@ -35,8 +35,8 @@
           for later listening (even offline) inside the Telegram app.</p>
         <a href="https://t.me/tubecasterbot" target="_blank" class="activeBasicLink btn btn-main-md">Open in Telegram</a>
       </div>
-      <div class="col-md-6 text-center order-1 order-md-2">
-        <img class="img-fluid" src="images/hero/shot-in-frame.png" alt="screenshot">
+      <div class="col-md-6 text-center order-1 order-md-2 my-4">
+        <img class="lazy-load HeroImage img-fluid" src="images/hero/shot-in-frame.jpg" alt="screenshot">
       </div>
     </div>
   </div>
@@ -74,13 +74,13 @@
 <section id="general" class="feature section pt-0">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 ml-auto justify-content-center">
+      <div class="col-lg-6 ml-auto justify-content-center my-4">
         <!-- Feature Mockup -->
         <div class="image-content" data-aos="fade-right">
-          <img class="img-fluid rounded-lg" src="images/shots/00-help.jpg" alt="Help message.">
+          <img class="lazy-load img-fluid rounded-lg" src="images/shots/00-help.jpg" alt="Help message.">
         </div>
       </div>
-      <div class="col-lg-6 mr-auto align-self-center">
+      <div class="col-lg-6 mr-auto align-self-center my-4">
         <div class="feature-content">
           <h2 class="color-primary">Perfect for</h2>
           <ul>
@@ -119,10 +119,62 @@
   </div>
 </section>
 
-<section id="features" class="feature section pt-0">
+<!--=================================
+=            Shots            =
+==================================-->
+<section id="screenshots" class="section shots gradient-banner">
+
+  <!-- Shots Slider -->
+  <div class="section-title">
+    <h2>Screenshots</h2>
+    <!-- <p><a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">TubeCaster</a> makes -->
+    <!--   it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p> -->
+  </div>
+  <div class="shots-slider owl-carousel owl-theme">
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/menu.jpg">
+      <p class="descr">The application menu.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/video-details.jpg">
+      <p class="descr">Video details.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/00-start-and-registered.jpg">
+      <p class="descr">Successful registration.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/audio.jpg">
+      <p class="descr">Downloaded audio.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/details-1.jpg">
+      <p class="descr">Fetched video details.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/details-2.png">
+      <p class="descr">Video details.</p>
+    </div>
+
+    <div class="item">
+      <img class="lazy-load item img-fluid" src="images/shots/sending-audio-full-scrren.jpg">
+      <p class="descr">Sending audio.</p>
+    </div>
+
+  </div>
+</section>
+<!--====  End of Shots  ====-->
+
+<section id="features" class="feature section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 ml-auto align-self-center">
+      <div class="col-lg-6 ml-auto align-self-center my-4">
         <div class="feature-content">
           <h2 class="color-primary">Application Features</h2>
           <ul>
@@ -133,7 +185,7 @@
             <li>Testing with partial functional/local resources.</li>
             <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
             <li>Detecting delays in the processing queue. In this case, repeated messages are periodically sent indicating that the request is still being processed.</li>
-            <li><strong>Powered by mighty and cute kitties underhood.</strong></li>
+            <li><strong>Powered by mighty and cute kitties under the hood.</strong></li>
           </ul>
         </div>
         <!-- Testimonial Quote
@@ -151,10 +203,10 @@
         </div>
         -->
       </div>
-      <div class="col-lg-6 mr-auto justify-content-center">
+      <div class="col-lg-6 mr-auto justify-content-center my-4">
         <!-- Feature mockup -->
         <div class="image-content" data-aos="fade-left">
-          <img class="img-fluid rounded-lg" src="images/shots/loading-audio-cat.jpg" alt="Audio downloading process.">
+          <img class="lazy-load img-fluid rounded-lg" src="images/shots/loading-audio-cat.jpg" alt="Audio downloading process.">
         </div>
       </div>
     </div>
@@ -240,58 +292,6 @@
    -->
 <!--====  End of Services  ====-->
 
-
-<!--=================================
-=            Shots            =
-==================================-->
-<section id="screenshots" class="section shots gradient-banner">
-
-  <!-- Shots Slider -->
-  <div class="section-title">
-    <h2>Screenshots</h2>
-    <!-- <p><a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">TubeCaster</a> makes -->
-    <!--   it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p> -->
-  </div>
-  <div class="shots-slider owl-carousel owl-theme">
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/menu.jpg">
-      <p class="descr">The application menu.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/video-details.jpg">
-      <p class="descr">Video details.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/00-start-and-registered.jpg">
-      <p class="descr">Successful registration.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/audio.jpg">
-      <p class="descr">Downloaded audio.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/details-1.jpg">
-      <p class="descr">Fetched video details.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/details-2.png">
-      <p class="descr">Video details.</p>
-    </div>
-
-    <div class="item">
-      <img class="item img-fluid" src="images/shots/sending-audio-full-scrren.jpg">
-      <p class="descr">Sending audio.</p>
-    </div>
-
-  </div>
-</section>
-<!--====  End of Shots  ====-->
 
 <!-- @@include('blocks/call-to-action-app.htm') -->
 
