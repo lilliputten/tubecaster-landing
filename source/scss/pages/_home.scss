@@ -175,7 +175,6 @@
 
 .feature {
   .feature-content {
-
     h2,
     p {
       margin-bottom: 25px;
@@ -321,7 +320,7 @@
     .item {
       img {
         height: $height;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
         border-radius: 10px;
       }
       p {
@@ -330,12 +329,41 @@
         overflow: hidden;
         text-overflow: ellipsis;
         color: #fff;
-        opacity: .5;
-        // color: #888888;
+        opacity: 0.5;
+      }
+    }
+    @media (width < 600px) {
+      $height: 500px;
+      .owl-stage {
+        max-height: calc($height + $plusHeight);
+      }
+      .item img {
+        height: $height;
       }
     }
     @media (width < 500px) {
       $height: 400px;
+      .owl-stage {
+        max-height: calc($height + $plusHeight);
+      }
+      .item img {
+        height: $height;
+      }
+      .item p {
+        display: none;
+      }
+    }
+    @media (width < 400px) {
+      $height: 300px;
+      .owl-stage {
+        max-height: calc($height + $plusHeight);
+      }
+      .item img {
+        height: $height;
+      }
+    }
+    @media (width < 300px) {
+      $height: 200px;
       .owl-stage {
         max-height: calc($height + $plusHeight);
       }
@@ -364,24 +392,29 @@
 }
 
 /* homepage 3 */
-.gradient-banner{
+.gradient-banner {
   padding: 100px 0 170px;
   position: relative;
   overflow: hidden;
-  &::before{
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 200%;
     height: 200%;
     // border-radius: 50%;
-    background-image: linear-gradient(45deg,#009EC5 0%, $primary-color 20%,#02225B 50%);
+    background-image: linear-gradient(
+      45deg,
+      #009ec5 0%,
+      $primary-color 20%,
+      #02225b 50%
+    );
   }
 }
 
-.pull-top{
+.pull-top {
   margin-top: -100px;
 }
 
@@ -397,12 +430,12 @@
     position: absolute;
 
     &::before {
-      content: '';
+      content: "";
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgba(255, 255, 255, .1);
+      background-color: rgba(255, 255, 255, 0.1);
       transform: rotate(-35deg);
       position: absolute;
       border-radius: 50px;
@@ -522,7 +555,7 @@
   }
 }
 
-.zindex-1{
+.zindex-1 {
   z-index: 1;
 }
 
@@ -535,12 +568,12 @@ hr {
   padding: 0;
 }
 
-.icon-box{
+.icon-box {
   height: 80px;
   width: 80px;
   text-align: center;
   background: $primary-color;
-  i{
+  i {
     line-height: 80px;
     font-size: 30px;
   }

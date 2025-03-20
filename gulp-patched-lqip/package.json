@@ -1,0 +1,48 @@
+{
+  "name": "gulp-image-lqip",
+  "version": "2.0.0",
+  "description": "Gulp plugin which generates HTML image placeholders using lqip technique",
+  "author": "Johann-S <johann.servoire@gmail.com> (https://www.johann-servoire.fr/)",
+  "contributors": [
+    "XhmikosR <xhmikosr@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johann-S/gulp-image-lqip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Johann-S/gulp-image-lqip/issues"
+  },
+  "homepage": "https://github.com/Johann-S/gulp-image-lqip#readme",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && gulp --gulpfile test/gulpfile.js"
+  },
+  "keywords": [
+    "gulp",
+    "lqip",
+    "images",
+    "placeholder",
+    "medium"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jimp": "^0.16.1",
+    "plugin-error": "^1.0.1",
+    "pretty": "^2.0.0",
+    "through2": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "gulp": "^4.0.2"
+  },
+  "files": [
+    "src/*.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  }
+}

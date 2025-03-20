@@ -7,7 +7,7 @@
 
 ## Build info (auto-generated)
 
-- Project info: tubecaster-landing v.0.0.1 / 2025.03.20 10:16:53 +0300
+- Project info: tubecaster-landing v.0.0.2 / 2025.03.20 22:02:44 +0300
 
 ## Maintenance
 

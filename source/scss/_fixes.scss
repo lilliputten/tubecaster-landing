@@ -29,6 +29,18 @@
   }
 }
 
+.HeroSection {
+  .HeroImage {
+    border-radius: 25px;
+  }
+}
+
+.lazy-load {
+  // max-width: 100%;
+  // height: auto;
+  display: inline-block;
+}
+
 .rounded-lg {
   border-radius: 10px !important;
 }
