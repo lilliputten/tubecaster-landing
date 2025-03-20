@@ -367,13 +367,14 @@ button:focus,
 
 .main-nav {
   background: #fff;
+  background: #1a1b1f;
   z-index: 1;
 }
 .main-nav .container {
   white-space: nowrap;
 }
 .main-nav .navbar-brand {
-  padding: 10px 0;
+  padding: 1em 0;
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
@@ -413,6 +414,7 @@ button:focus,
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
+  color: #ccc;
   padding-left: 20px;
   padding-right: 20px;
   line-height: 45px;
@@ -546,6 +548,10 @@ button:focus,
   margin-left: 5px;
 }
 
+.navbar-toggler {
+  color: #c122b4;
+}
+
 .navbar-toggler:focus,
 .navbar-toggler:hover {
   outline: none;
@@ -588,22 +594,23 @@ button:focus,
 .footer-main .block {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5em;
   align-items: center;
   justify-content: space-between;
 }
 .footer-main .block ul.social-icon {
   display: flex;
+  margin: 0;
+  margin-top: 5px;
 }
 .footer-main .block ul.social-icon li a {
   text-decoration: none;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
   color: #fff;
   text-align: center;
-  line-height: 38px;
 }
 .footer-main .block ul.social-icon li a {
   width: 32px;
@@ -1782,6 +1789,14 @@ hr {
   color: #c122b4;
   display: block;
   margin: 0;
+}
+
+.HeroSection .HeroImage {
+  border-radius: 25px;
+}
+
+.lazy-load {
+  display: inline-block;
 }
 
 .rounded-lg {
