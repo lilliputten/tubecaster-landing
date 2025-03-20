@@ -1,0 +1,47 @@
+@use "sass:color";
+
+@import "shared";
+
+.TopBenefits {
+  .rounded {
+    background-color: color.change(#fff, $alpha: 0.9);
+    border-radius: 20px !important;
+  }
+  .Icon {
+    $size: 80px;
+    width: $size;
+    height: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    // display: block;
+    i {
+      color: #fff;
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+.rounded-lg {
+  border-radius: 10px !important;
+}
+.rounded-xl {
+  border-radius: 20px !important;
+}
+
+.activeTextLink {
+  @include activeTextLink;
+}
+.activeBasicLink {
+  @include activeBasicLink;
+}
+.activeTextLinkWrapper {
+  @include activeTextLinkWrapper;
+}
+.activeBasicLinkWrapper {
+  @include activeBasicLinkWrapper;
+}

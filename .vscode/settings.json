@@ -1,0 +1,15 @@
+{
+  "search.exclude": {
+    "source-unused": true,
+    "theme": true,
+    "static": true,
+    "build": true,
+    "build-dev": true,
+    "node_modules": true,
+    "patches": true,
+    "publish": true
+  },
+  "git.ignoreLimitWarning": true,
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "findUnusedExports.detectCircularImports": true
+}

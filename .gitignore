@@ -1,0 +1,23 @@
+Thumbs.db
+.DS_Store
+.dist
+.tmp
+.sass-cache
+npm-debug.log
+node_modules
+yarn.lock
+netlify
+theme
+build
+build-dev
+
+# Temporariy, swap & ignored files
+/log*.txt
+/config-local.*
+/*.session
+*UNUSED
+*~
+.*.sw?
+*.tmp
+*.zip
+*.tgz

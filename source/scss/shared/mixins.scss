@@ -1,0 +1,76 @@
+// @use 'variables' as *;
+@import 'variables';
+
+// Active links...
+@mixin basicActiveLinkHovered {
+  opacity: 0.75;
+}
+@mixin activeLinkUnderlined {
+  text-decoration: underline; // !important;
+  // text-decoration-skip-ink: none;
+}
+@mixin basicActiveLinkWrapper {
+  button,
+  a {
+    &:not([class*='btn']) {
+      transition: all var(--transitionTimeMs);
+      &:hover {
+        @include basicActiveLinkHovered;
+      }
+    }
+  }
+}
+@mixin activeUnderlinedLinkWrapper {
+  @include basicActiveLinkWrapper;
+  button,
+  a {
+    &:not([class*='btn']):hover {
+      @include activeLinkUnderlined;
+    }
+  }
+}
+@mixin activeLinkWrapper {
+  @include basicActiveLinkWrapper;
+}
+
+@mixin activeImgLinkWrapper {
+  img {
+    transition: all var(--transitionTimeMs);
+  }
+  &:hover {
+    img {
+      opacity: 0.85;
+    }
+  }
+}
+@mixin activeBasicLink {
+  & {
+    transition: all var(--transitionTimeMs);
+  }
+  &:hover {
+    opacity: 0.85;
+  }
+}
+@mixin activeTextLink {
+  @include activeBasicLink;
+  &:hover {
+    // color: var(--primaryDarkColor);
+    text-decoration: underline;
+  }
+}
+@mixin activeBasicLinkWrapper {
+  button,
+  a {
+    &:not([class*='btn']) {
+      @include activeBasicLink;
+    }
+  }
+}
+@mixin activeTextLinkWrapper {
+  button,
+  a {
+    &:not([class*='btn']) {
+      @include activeTextLink;
+    }
+  }
+}

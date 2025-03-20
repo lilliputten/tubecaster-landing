@@ -1,0 +1,33 @@
+// @use 'sass:map';
+// @use 'sass:math';
+// @use 'sass:color';
+
+// @import '../../../static/vendor/bootstrap-5.3.2/scss/functions';
+// @import '../../../static/vendor/bootstrap-5.3.2/scss/variables';
+
+// Core
+
+// Variables
+$primaryColor: #c122b4;
+
+$body-color: #ffffff;
+$primary-color: $primaryColor;
+$secondary-color: #2e7eed; // #8b187d;
+$border-color:#cccccc;
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Lora', serif;
+$text-color: #808080;
+$title-color: #757575;
+$gray: #808080;
+$light-gray: #fafafa;
+$dark: #000;
+$light: #fff;
+$black: #000;
+// $icon-font: 'themefisher-font';
+
+// Timeouts...
+
+$momentTimeMs: 150ms;
+$transitionTimeMs: 250ms;
+$animationTimeMs: 500ms;
+$effectTimeMs: 1000ms;
