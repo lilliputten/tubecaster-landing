@@ -1,0 +1,7 @@
+:root {
+  --momentTimeMs: 150ms;
+  --transitionTimeMs: 250ms;
+  --animationTimeMs: 500ms;
+  --effectTimeMs: 1000ms;
+}
+/*# sourceMappingURL=variables-expose.css.map */
