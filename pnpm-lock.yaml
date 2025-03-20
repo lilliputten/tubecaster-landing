@@ -23,6 +23,9 @@ importers:
       gulp-header-comment:
         specifier: ^0.10.0
         version: 0.10.0
+      gulp-html-prettify:
+        specifier: ^0.0.1
+        version: 0.0.1
       gulp-htmlmin:
         specifier: ^5.0.1
         version: 5.0.1
@@ -41,10 +44,6 @@ importers:
       sass:
         specifier: ^1.52.3
         version: 1.86.0
-    devDependencies:
-      gulp-html-prettify:
-        specifier: ^0.0.1
-        version: 0.0.1
 
 packages:
 
