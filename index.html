@@ -17,7 +17,20 @@
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
   <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
-    <div class="container"><span class="navbar-brand" href="/"><img src="images/logo.png" alt="Tubecaster logo"> <span>Tubecaster Telegram Bot</span></span>
+    <div class="container"><span class="navbar-brand" href="/"><img src="images/logo.png" alt="Tubecaster logo"> <span>Tubecaster Telegram Bot</span> </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation"><span class="bi bi-list"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#general">General</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#screenshots">Screenshots</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
   <section class="section gradient-banner">
@@ -72,7 +85,7 @@
       </div>
     </div>
   </section>
-  <section class="feature section pt-0">
+  <section id="general" class="feature section pt-0">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 ml-auto justify-content-center">
@@ -82,13 +95,19 @@
         </div>
         <div class="col-lg-6 mr-auto align-self-center">
           <div class="feature-content">
-            <h2>How to use</h2>
+            <h2 class="color-primary">Perfect for</h2>
+            <ul>
+              <li>For listening to talk shows, music, or videos that don’t contain a lot of video content.</li>
+              <li>For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.</li>
+              <li>This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).</li>
+            </ul>
+            <h2 class="color-primary">How to use</h2>
             <ul>
               <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>. Request registration from menu or by <code>/register</code> command.</li>
               <li><strong>Paste YouTube Link</strong> or share it from YouTube app.</li>
               <li><strong>Download MP3</strong> or listen it right from the chat.</li>
             </ul>
-            <h2>Tech Insides</h2>
+            <h2 class="color-primary">Tech Insides</h2>
             <ul>
               <li>A development branch of yt-dlp used for video processing (fetching info and audio tracks).</li>
               <li>The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.</li>
@@ -98,12 +117,12 @@
       </div>
     </div>
   </section>
-  <section class="feature section pt-0">
+  <section id="features" class="feature section pt-0">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 ml-auto align-self-center">
           <div class="feature-content">
-            <h2>Application Features</h2>
+            <h2 class="color-primary">Application Features</h2>
             <ul>
               <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
               <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
@@ -123,7 +142,10 @@
       </div>
     </div>
   </section>
-  <section class="section shots" id="shots">
+  <section id="screenshots" class="section shots gradient-banner">
+    <div class="section-title">
+      <h2>Screenshots</h2>
+    </div>
     <div class="shots-slider owl-carousel owl-theme">
       <div class="item">
         <img class="item img-fluid" src="images/shots/menu.jpg">
@@ -162,9 +184,9 @@
           <div class="_col-lg-4 col-md-12 m-md-auto align-self-center">
             <div class="block"><span class="navbar-brand" href="/"><img src="images/logo.png" alt="Tubecaster logo"> <span>Tubecaster Telegram Bot</span></span>
               <ul class="social-icon list-inline">
-                <li class="list-inline-item"><a href="https://t.me/tubecasterbot" target="_blank"><i class="bi bi-telegram"></i></a>
+                <li class="list-inline-item"><a href="https://t.me/tubecasterbot" target="_blank"><i class="bi bi-telegram color-primary"></i></a>
                 </li>
-                <li class="list-inline-item"><a href="https://github.com/lilliputten/tubecaster-telegram-bot" target="_blank"><i class="bi bi-github"></i></a>
+                <li class="list-inline-item"><a href="https://github.com/lilliputten/tubecaster-telegram-bot" target="_blank"><i class="bi bi-github color-primary"></i></a>
                 </li>
               </ul>
             </div>
@@ -172,7 +194,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center bg-dark py-4"><small class="text-secondary">Copyright &copy;<script>document.write(new Date().getFullYear())</script>. Developed by <a href="https://lilliputten.com/">lilliputten.com</a></small>
+    <div class="text-center bg-dark py-4"><small class="text-secondary">Copyright &copy;<script>document.write(new Date().getFullYear())</script>. Developed by <a href="https://lilliputten.com/projects/2025/tubecaster-telegram-bot/">lilliputten.com</a></small>
     </div>
   </footer>
   <div class="scroll-top-to"><i class="bi bi-chevron-up"></i>

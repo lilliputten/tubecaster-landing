@@ -138,11 +138,11 @@ a:hover {
 }
 
 .bg-gray {
-  background: #fafafa;
+  background: #666 !important;
 }
 
-.bg-blue {
-  background: #c122b4;
+.bg-primary {
+  background-color: #c122b4 !important;
 }
 
 .bg-1 {
@@ -388,6 +388,8 @@ button:focus,
   display: inline-block;
   top: 3px;
   position: relative;
+  color: #c122b4;
+  font-size: 120%;
 }
 @media (width < 400px) {
   .main-nav .navbar-brand span {
@@ -570,6 +572,7 @@ button:focus,
   display: inline-block;
   top: 3px;
   position: relative;
+  color: #c122b4;
 }
 .footer-main .navbar-brand img {
   border-radius: 50%;
@@ -682,6 +685,7 @@ button:focus,
   z-index: 999556;
   cursor: pointer;
   display: none;
+  border-radius: 50%;
 }
 .scroll-top-to:hover {
   background: #333;
@@ -831,67 +835,16 @@ button:focus,
   margin-bottom: 40px;
 }
 
-.banner-full .image {
-  display: flex;
-  justify-content: center;
+.shots {
+  padding: 80px 0 !important;
 }
-.banner-full .image img {
-  height: 625px;
+.shots > .section-title {
+  z-index: 100;
+  position: relative;
 }
-@media (max-width: 768px) {
-  .banner-full .image {
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .banner-full .block {
-    text-align: center;
-  }
-}
-.banner-full .block .logo {
-  margin-bottom: 40px;
-}
-.banner-full .block h1 {
-  margin-bottom: 40px;
-}
-.banner-full .block p {
-  font-size: 20px;
-  margin-bottom: 50px;
-}
-.banner-full .block .app {
-  margin-bottom: 20px;
-}
-
-.video-promo {
-  padding: 150px 0;
-}
-.video-promo .content-block {
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-.video-promo .content-block h2 {
-  font-size: 30px;
+.shots > .section-title > * {
   color: #fff;
 }
-.video-promo .content-block p {
-  margin-bottom: 30px;
-}
-.video-promo .content-block a i.video {
-  height: 125px;
-  width: 125px;
-  background: #c122b4;
-  display: inline-block;
-  font-size: 40px;
-  color: #fff;
-  text-align: center;
-  line-height: 125px;
-  border-radius: 100%;
-}
-.video-promo .content-block a:focus {
-  outline: 0;
-}
-
 .shots .shots-slider .owl-stage {
   max-height: 612px;
   overflow: hidden;
@@ -904,9 +857,10 @@ button:focus,
 .shots .shots-slider .item p {
   font-family: "Lora", serif;
   font-style: italic;
-  color: #888888;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #fff;
+  opacity: 0.5;
 }
 @media (width < 500px) {
   .shots .shots-slider .owl-stage {
@@ -1808,8 +1762,11 @@ hr {
 }
 
 .TopBenefits .rounded {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(193, 34, 180, 0.8);
   border-radius: 20px !important;
+}
+.TopBenefits h3, .TopBenefits p {
+  color: #fff !important;
 }
 .TopBenefits .Icon {
   width: 80px;
@@ -1819,10 +1776,10 @@ hr {
   justify-content: center;
   margin: 0 auto;
   border-radius: 50%;
-  background-color: #c122b4;
+  background-color: #fff;
 }
 .TopBenefits .Icon i {
-  color: #fff;
+  color: #c122b4;
   display: block;
   margin: 0;
 }
