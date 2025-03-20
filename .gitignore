@@ -10,6 +10,7 @@ netlify
 theme
 build
 build-dev
+publish
 
 # Temporariy, swap & ignored files
 /log*.txt

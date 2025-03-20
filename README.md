@@ -1,11 +1,15 @@
-# A simple landing page based on a Themefisher template
+<!--
+ @since 2025.03.20, 10:02
+ @changed 2025.03.20, 10:02
+-->
 
-Small Apps is a clean and modern Free responsive app landing-page template for Mobile App. Built with Bootstrap 4.x frontend Framework. The codebase is well organized, very easy to customize, and SEO optimized.
+# Simple tubecaster landing page based on a Themefisher template
 
-<!-- demo -->
-## Example Site
+## Build info (auto-generated)
 
+- Project info: tubecaster-landing v.0.0.1 / 2025.03.20 10:16:53 +0300
 
+## Maintenance
 
 #### Install prerequisites (once for a machine)
 
@@ -25,13 +29,13 @@ After successfully installing those dependencies, open this theme with any IDE [
 * Install dependencies
 
 ```
-npm install
+pnpm install
 ```
 
 * Run locally
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live reload the browser when changes are saved.
@@ -41,43 +45,6 @@ After that, it will open up a preview of the template in your default browser, w
 After finishing all the customization, you can create a production build by running this command.
 
 ```
-npm run build
+pnpm run build
 ```
 
-Now you get a `theme` folder that has all the changes you have made. you can use this folder as your main theme.
-
-👉🏻 [visit documentation](https://docs.themefisher.com/small-apps/)
-
-<!-- reporting issue -->
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the Small Apps Template. Please Search [existing issues](https://github.com/themefisher/small-apps/issues). Someone may have already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/small-apps/issues).
-
-<!-- support -->
-## Technical Support or Questions (Paid)
-
-If you have questions or need help integrating the product please [contact us](mailto:mehedi@themefisher.com) instead of opening an issue.
-
-<!-- licence -->
-## License
-
-Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
-
-**Code License:** Released under the [MIT](https://github.com/themefisher/small-apps/blob/main/LICENSE) license.
-
-**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.
-
-<!-- resources -->
-## Resources
-
-Some third-party plugins that we used to build this template. Please check their license.
-
-* **Bootstrap v4.5**: <https://getbootstrap.com/docs/4.5/getting-started/introduction/>
-* **Jquery v3.5.1**: <https://jquery.com/download/>
-* **Themify Icons**: <https://themify.me/themify-icons>
-* **Google Fonts**: <http://fonts.google.com/>
-* **AOS**: <https://michalsnik.github.io/aos/>
-* **Fancybox**: <http://fancyapps.com/fancybox/>
-* **Slick**: <https://kenwheeler.github.io/slick/>
-* **SyoTimer**: <http://syomochkin.xyz/folio/syotimer/demo.html>

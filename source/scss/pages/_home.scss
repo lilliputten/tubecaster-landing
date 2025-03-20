@@ -227,82 +227,90 @@
   }
 }
 
-.banner-full {
-  .image {
-    display: flex;
-    justify-content: center;
-
-    img {
-      height: 625px;
-    }
-
-    @include tablet {
-      margin-bottom: 30px;
-    }
-  }
-
-  .block {
-    @include tablet {
-      text-align: center;
-    }
-
-    .logo {
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      margin-bottom: 40px;
-    }
-
-    p {
-      font-size: 20px;
-      margin-bottom: 50px;
-    }
-
-    .app {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.video-promo {
-  padding: 150px 0;
-
-  .content-block {
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-
-    h2 {
-      font-size: 30px;
-      color: $light;
-    }
-
-    p {
-      margin-bottom: 30px;
-    }
-
-    a {
-      i.video {
-        height: 125px;
-        width: 125px;
-        background: $primary-color;
-        display: inline-block;
-        font-size: 40px;
-        color: $light;
-        text-align: center;
-        line-height: 125px;
-        border-radius: 100%;
-      }
-
-      &:focus {
-        outline: 0;
-      }
-    }
-  }
-}
+// .banner-full {
+//   .image {
+//     display: flex;
+//     justify-content: center;
+//
+//     img {
+//       height: 625px;
+//     }
+//
+//     @include tablet {
+//       margin-bottom: 30px;
+//     }
+//   }
+//
+//   .block {
+//     @include tablet {
+//       text-align: center;
+//     }
+//
+//     .logo {
+//       margin-bottom: 40px;
+//     }
+//
+//     h1 {
+//       margin-bottom: 40px;
+//     }
+//
+//     p {
+//       font-size: 20px;
+//       margin-bottom: 50px;
+//     }
+//
+//     .app {
+//       margin-bottom: 20px;
+//     }
+//   }
+// }
+//
+// .video-promo {
+//   padding: 150px 0;
+//
+//   .content-block {
+//     width: 60%;
+//     margin: 0 auto;
+//     text-align: center;
+//
+//     h2 {
+//       font-size: 30px;
+//       color: $light;
+//     }
+//
+//     p {
+//       margin-bottom: 30px;
+//     }
+//
+//     a {
+//       i.video {
+//         height: 125px;
+//         width: 125px;
+//         background: $primary-color;
+//         display: inline-block;
+//         font-size: 40px;
+//         color: $light;
+//         text-align: center;
+//         line-height: 125px;
+//         border-radius: 100%;
+//       }
+//
+//       &:focus {
+//         outline: 0;
+//       }
+//     }
+//   }
+// }
 
 .shots {
+  padding: 80px 0 !important;
+  > .section-title {
+    z-index: 100;
+    position: relative;
+    > * {
+      color: #fff;
+    }
+  }
   .shots-slider {
     $height: 580px;
     $plusHeight: 32px;
@@ -319,9 +327,11 @@
       p {
         font-family: $secondary-font;
         font-style: italic;
-        color: #888888;
         overflow: hidden;
         text-overflow: ellipsis;
+        color: #fff;
+        opacity: .5;
+        // color: #888888;
       }
     }
     @media (width < 500px) {

@@ -29,7 +29,7 @@
       <div class="col-md-6 order-2 order-md-1 text-center text-md-left">
         <!-- Hero title -->
         <h1 class="activeBasicLinkWrapper text-white _font-weight-bold mb-4">
-          Meet the <a href="https://t.me/tubecasterbot" target="_blank">@TubeCaster!</a>
+          Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCaster!</a>
         </h1>
         <p class="text-white mb-5">The simple telegram bot designed to convert YouTube videos and audio podcasts
           for later listening (even offline) inside the Telegram app.</p>
@@ -71,7 +71,7 @@
 <!--==================================
 =            Feature Grid            =
 ===================================-->
-<section class="feature section pt-0">
+<section id="general" class="feature section pt-0">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 ml-auto justify-content-center">
@@ -82,13 +82,19 @@
       </div>
       <div class="col-lg-6 mr-auto align-self-center">
         <div class="feature-content">
-          <h2>How to use</h2>
+          <h2 class="color-primary">Perfect for</h2>
+          <ul>
+            <li>For listening to talk shows, music, or videos that don’t contain a lot of video content.</li>
+            <li>For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.</li>
+            <li>This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).</li>
+          </ul>
+          <h2 class="color-primary">How to use</h2>
           <ul>
             <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>. Request registration from menu or by <code>/register</code> command.</li>
             <li><strong>Paste YouTube Link</strong> or share it from YouTube app.</li>
             <li><strong>Download MP3</strong> or listen it right from the chat.</li>
           </ul>
-          <h2>Tech Insides</h2>
+          <h2 class="color-primary">Tech Insides</h2>
           <ul>
             <li>A development branch of yt-dlp used for video processing (fetching info and audio tracks).</li>
             <li>The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.</li>
@@ -113,12 +119,12 @@
   </div>
 </section>
 
-<section class="feature section pt-0">
+<section id="features" class="feature section pt-0">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 ml-auto align-self-center">
         <div class="feature-content">
-          <h2>Application Features</h2>
+          <h2 class="color-primary">Application Features</h2>
           <ul>
             <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
             <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
@@ -263,8 +269,16 @@
 <!--=================================
 =            Shots            =
 ==================================-->
-<section class="section shots" id="shots">
+<section id="screenshots" class="section shots gradient-banner">
+  <!-- <div class="container"> -->
+  <!--   <div class="row"> -->
+  <!--     <div class="col-12 ml-auto align-self-center"> -->
   <!-- Shots Slider -->
+        <div class="section-title">
+          <h2>Screenshots</h2>
+          <!-- <p><a href="https://themefisher.com/products/small-apps-free-app-landing-page-template/">TubeCaster</a> makes -->
+          <!--   it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p> -->
+        </div>
   <div class="shots-slider owl-carousel owl-theme">
 
     <!-- <div class="item">
@@ -380,6 +394,9 @@
     </div> -->
 
 
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
   </div>
 </section>
 <!--====  End of Shots  ====-->

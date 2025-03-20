@@ -1,6 +1,6 @@
 {
   "name": "smapp-apps",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "smapp-apps free saas template",
   "author": "Themefisher",
   "license": "MIT",
@@ -11,6 +11,7 @@
     "gulp-file-include": "^2.3.0",
     "gulp-header-comment": "^0.10.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-html-prettify": "^0.0.1",
     "gulp-minify": "^3.1.0",
     "gulp-rimraf": "^1.0.0",
     "gulp-sass": "^5.1.0",
@@ -20,8 +21,5 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build"
-  },
-  "devDependencies": {
-    "gulp-html-prettify": "^0.0.1"
   }
 }

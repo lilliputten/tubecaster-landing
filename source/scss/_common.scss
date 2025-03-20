@@ -1,3 +1,5 @@
+@import "shared";
+
 body {
   overflow-x: hidden;
 }
@@ -31,11 +33,11 @@ a:hover {
 }
 
 .bg-gray {
-  background: #fafafa;
+  background: #666 !important;
 }
 
-.bg-blue {
-  background: $primary-color;
+.bg-primary {
+  background-color: $primaryColor !important;
 }
 
 .bg-1 {

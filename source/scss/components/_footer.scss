@@ -19,6 +19,7 @@
       display: inline-block;
       top: 3px;
       position: relative;
+      color: $primaryColor;
     }
     img {
       border-radius: 50%;
@@ -152,6 +153,7 @@
   z-index: 999556;
   cursor: pointer;
   display: none;
+  border-radius: 50%;
   &:hover {
     background: #333;
   }

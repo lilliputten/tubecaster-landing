@@ -23,6 +23,8 @@
       display: inline-block;
       top: 3px;
       position: relative;
+      color: $primaryColor;
+      font-size: 120%;
     }
     @media (width < 300px) {
       // display: none;
