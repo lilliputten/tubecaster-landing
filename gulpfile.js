@@ -1,5 +1,7 @@
 "use strict";
 
+const path = require("path");
+
 const sass = require("gulp-sass")(require("sass"));
 const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
@@ -11,14 +13,13 @@ const rimraf = require("rimraf");
 const htmlmin = require("gulp-htmlmin");
 const prettify = require("gulp-html-prettify");
 const minify = require("gulp-minify");
+// const debug = require("gulp-debug");
+// import debug from 'gulp-debug';
 
-const sharedComments = `
-WEBSITE: http://tubecaster.lilliputten.com/
-TELEGRAM: https://t.me/tubecasterbot
-GITHUB: https://github.com/lilliputten/tubecaster-telegram-bot
-`;
+// const gulpImgLqip = require("gulp-image-lqip");
+const gulpImgLqip = require("./gulp-patched-lqip/src/index.js");
 
-const path = {
+const paths = {
   src: {
     html: "source/*.html",
     others: "source/*.+(php|ico|png)",
@@ -31,18 +32,19 @@ const path = {
   },
   build: {
     dirBuild: "build/",
-    dirDev: "build/",
   },
 };
+
+const lqipPath = path.resolve(__dirname, "source");
 
 // HTML
 gulp.task("html_build", function () {
   return (
     gulp
-      .src(path.src.html)
+      .src(paths.src.html)
       .pipe(
         fileinclude({
-          basepath: path.src.incdir,
+          basepath: paths.src.incdir,
         })
       )
       .pipe(
@@ -53,7 +55,7 @@ gulp.task("html_build", function () {
       )
       // .pipe(comments(sharedComments))
       .pipe(prettify({ indent_char: " ", indent_size: 2 }))
-      .pipe(gulp.dest(path.build.dirDev))
+      .pipe(gulp.dest(paths.build.dirBuild))
       .pipe(
         bs.reload({
           stream: true,
@@ -66,7 +68,7 @@ gulp.task("html_build", function () {
 gulp.task("scss_build", function () {
   return (
     gulp
-      .src(path.src.scss)
+      .src(paths.src.scss)
       .pipe(sourcemaps.init())
       .pipe(
         sass({
@@ -85,7 +87,7 @@ gulp.task("scss_build", function () {
       .pipe(autoprefixer())
       .pipe(sourcemaps.write("/"))
       // .pipe(comments(sharedComments))
-      .pipe(gulp.dest(path.build.dirDev + "css/"))
+      .pipe(gulp.dest(paths.build.dirBuild + "css/"))
       .pipe(
         bs.reload({
           stream: true,
@@ -98,7 +100,7 @@ gulp.task("scss_build", function () {
 gulp.task("js_build", function () {
   return (
     gulp
-      .src(path.src.js)
+      .src(paths.src.js)
       .pipe(sourcemaps.init())
       // .pipe(comments(sharedComments))
       .pipe(
@@ -116,7 +118,7 @@ gulp.task("js_build", function () {
         })
       )
       .pipe(sourcemaps.write("/"))
-      .pipe(gulp.dest(path.build.dirDev + "js/"))
+      .pipe(gulp.dest(paths.build.dirBuild + "js/"))
       .pipe(
         bs.reload({
           stream: true,
@@ -128,8 +130,8 @@ gulp.task("js_build", function () {
 // Images
 gulp.task("images_build", function () {
   return gulp
-    .src(path.src.images)
-    .pipe(gulp.dest(path.build.dirDev + "images/"))
+    .src(paths.src.images)
+    .pipe(gulp.dest(paths.build.dirBuild + "images/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -140,8 +142,8 @@ gulp.task("images_build", function () {
 // Plugins
 gulp.task("plugins_build", function () {
   return gulp
-    .src(path.src.plugins)
-    .pipe(gulp.dest(path.build.dirDev + "plugins/"))
+    .src(paths.src.plugins)
+    .pipe(gulp.dest(paths.build.dirBuild + "plugins/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -151,22 +153,40 @@ gulp.task("plugins_build", function () {
 
 // Other files like favicon, php, sourcele-icon on root directory
 gulp.task("others_build", function () {
-  return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
+  return gulp.src(paths.src.others).pipe(gulp.dest(paths.build.dirBuild));
+});
+
+// lqip
+gulp.task("lqip", () => {
+  const lqipPipe = gulpImgLqip(lqipPath, {
+    // attribute: 'src',
+    pretty: false,
+    // srcAttr: 'data-src',
+  });
+  return (
+    gulp
+      .src(`${paths.build.dirBuild}/**/*.html`)
+      // `gulp-image-lqip` needs filepaths
+      // so you can't have any plugins before it
+      .pipe(lqipPipe)
+      // .pipe(debug({ title: 'unicorn:' }))
+      // .pipe(gulp.dest(paths.build.dirBuild + "lqip/"))
+  );
 });
 
 // Clean Build Folder
 gulp.task("clean", function (cb) {
-  rimraf(path.build.dirDev, cb);
+  rimraf(`${paths.build.dirBuild}*`, cb);
 });
 
 // Watch Task
 gulp.task("watch_build", function () {
-  gulp.watch(path.src.html, gulp.series("html_build"));
-  gulp.watch(path.src.htminc, gulp.series("html_build"));
-  gulp.watch(path.src.scss, gulp.series("scss_build"));
-  gulp.watch(path.src.js, gulp.series("js_build"));
-  gulp.watch(path.src.images, gulp.series("images_build"));
-  gulp.watch(path.src.plugins, gulp.series("plugins_build"));
+  gulp.watch(paths.src.html, gulp.series("html_build"));
+  gulp.watch(paths.src.htminc, gulp.series("html_build"));
+  gulp.watch(paths.src.scss, gulp.series("scss_build"));
+  gulp.watch(paths.src.js, gulp.series("js_build"));
+  gulp.watch(paths.src.images, gulp.series("images_build"));
+  gulp.watch(paths.src.plugins, gulp.series("plugins_build"));
 });
 
 // Dev Task
@@ -175,6 +195,7 @@ gulp.task(
   gulp.series(
     "clean",
     "html_build",
+    "lqip",
     "js_build",
     "scss_build",
     "images_build",
@@ -184,7 +205,7 @@ gulp.task(
       bs.init({
         open: false,
         server: {
-          baseDir: path.build.dirDev,
+          baseDir: paths.build.dirBuild,
         },
       });
     })
@@ -195,10 +216,12 @@ gulp.task(
 gulp.task(
   "build",
   gulp.series(
+    "clean",
     "html_build",
+    "lqip",
     "js_build",
     "scss_build",
     "images_build",
-    "plugins_build"
+    "plugins_build",
   )
 );
