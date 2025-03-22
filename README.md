@@ -7,7 +7,12 @@
 
 ## Build info (auto-generated)
 
-- Project info: tubecaster-landing v.0.0.2 / 2025.03.20 22:02:44 +0300
+- Project info: tubecaster-landing v.0.0.3 / 2025.03.22 09:01:55 +0300
+
+## Resources
+
+- The project' repository: https://github.com/lilliputten/tubecaster-landing
+- The deployed web site: https://tubecaster.lilliputten.com/
 
 ## Maintenance
 

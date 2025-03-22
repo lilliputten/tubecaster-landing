@@ -1,4 +1,3 @@
-// @use 'variables' as *;
 @import 'variables';
 
 // Active links...
@@ -54,7 +53,6 @@
 @mixin activeTextLink {
   @include activeBasicLink;
   &:hover {
-    // color: var(--primaryDarkColor);
     text-decoration: underline;
   }
 }
