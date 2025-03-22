@@ -19,8 +19,7 @@
     justify-content: center;
     margin: 0 auto;
     border-radius: 50%;
-    background-color: #fff; // $primaryColor;
-    // display: block;
+    background-color: #fff;
     i {
       color: $primaryColor;
       display: block;
@@ -36,8 +35,6 @@
 }
 
 .lazy-load {
-  // max-width: 100%;
-  // height: auto;
   display: inline-block;
 }
 

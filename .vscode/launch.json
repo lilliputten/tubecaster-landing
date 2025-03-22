@@ -8,6 +8,16 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "pnpm gulp",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["exec", "gulp", "build"],
+      "console": "integratedTerminal",
+      // "protocol": "inspector",
+      "skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"]
+    },
+    {
       "name": "Node: gulp",
       "type": "node",
       "request": "launch",
@@ -16,16 +26,6 @@
       "args": [
         "lqip"
       ]
-    },
-    {
-      "name": "pnpm gulp",
-      "type": "node",
-      "request": "launch",
-      "runtimeExecutable": "pnpm",
-      "runtimeArgs": ["exec", "gulp", "lqip"],
-      "console": "integratedTerminal",
-      "protocol": "inspector",
-      "skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"]
     },
     {
       "name": "custom script",
