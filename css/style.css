@@ -794,32 +794,6 @@ button:focus,
   margin-bottom: 30px;
 }
 
-.feature {
-  /*
-   * .testimonial {
-   *   @include tablet {
-   *     text-align: center;
-   *   }
-   *   p {
-   *     font-family: $secondary-font;
-   *     margin-bottom: 10px;
-   *     font-style: italic;
-   *     color: #242424;
-   *   }
-   *   ul.meta {
-   *     li {
-   *       font-size: 12px;
-   *       margin-right: 10px;
-   *       img {
-   *         height: 40px;
-   *         width: 40px;
-   *         border-radius: 100%;
-   *       }
-   *     }
-   *   }
-   * }
-   */
-}
 .feature .feature-content h2,
 .feature .feature-content p {
   margin-bottom: 25px;
