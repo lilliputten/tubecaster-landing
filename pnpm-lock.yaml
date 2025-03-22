@@ -17,9 +17,6 @@ importers:
       gulp-autoprefixer:
         specifier: ^8.0.0
         version: 8.0.0(gulp@4.0.2)
-      gulp-embed-lqip-as-background:
-        specifier: ^0.0.5
-        version: 0.0.5
       gulp-file-include:
         specifier: ^2.3.0
         version: 2.3.0
@@ -44,6 +41,10 @@ importers:
       sass:
         specifier: ^1.52.3
         version: 1.86.0
+    devDependencies:
+      gulp-embed-lqip-as-background:
+        specifier: ^0.0.8
+        version: 0.0.8
 
 packages:
 
@@ -1197,8 +1198,8 @@ packages:
     engines: {node: '>= 0.10'}
     hasBin: true
 
-  gulp-embed-lqip-as-background@0.0.5:
-    resolution: {integrity: sha512-UVH7B0WNZjq1gMxnmwSiOwCOc/hnqv8u38A/LLSYDwu1nxy357OCqzx/hyy+U+D2TKqFdE31taXnNKfA0aoQvA==}
+  gulp-embed-lqip-as-background@0.0.8:
+    resolution: {integrity: sha512-5zivg7NiQVL9fWvvVTQyFkpSyG5O79kBU7TDxTyiY6uELRrjcbX8Pon56iopo7EX/MZYlfg18vLyzMuKurtj8A==}
     engines: {node: '>=10'}
 
   gulp-file-include@2.3.0:
@@ -3985,7 +3986,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gulp-embed-lqip-as-background@0.0.5:
+  gulp-embed-lqip-as-background@0.0.8:
     dependencies:
       cheerio: 1.0.0
       jimp: 0.16.13

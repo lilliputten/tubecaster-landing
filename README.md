@@ -1,18 +1,23 @@
 <!--
  @since 2025.03.20, 10:02
- @changed 2025.03.20, 10:02
+ @changed 2025.03.22, 23:19
 -->
 
-# Simple tubecaster landing page based on a Themefisher template
+# Simple tubecaster promo landing page based on a Themefisher template
+
+This simple site based on the [Small Apps](https://themefisher.com/products/small-apps-bootstrap) themefisher bootstrap 4 template.
+
+At the same time it's a playground for [Gulp LQIP small image placeholder generator](https://github.com/lilliputten/gulp-embed-lqip-as-background) plugin. ([LQIP](https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained) stands for "Low-quality image placeholders" technique to provide already prepared small resource-effective image previews.)
 
 ## Build info (auto-generated)
 
-- Project info: tubecaster-landing v.0.0.3 / 2025.03.22 09:01:55 +0300
+- Project info: tubecaster-landing v.0.0.4 / 2025.03.22 23:35:18 +0300
 
 ## Resources
 
-- The project' repository: https://github.com/lilliputten/tubecaster-landing
-- The deployed web site: https://tubecaster.lilliputten.com/
+- The project's repository: https://github.com/lilliputten/tubecaster-landing
+
+- The deployed demo site: https://tubecaster.lilliputten.com/
 
 ## Maintenance
 
