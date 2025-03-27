@@ -18,8 +18,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0(gulp@4.0.2)
       gulp-embed-lqip-as-background:
-        specifier: ^0.0.10
-        version: 0.0.10
+        specifier: ^0.0.11
+        version: 0.0.11
       gulp-file-include:
         specifier: ^2.3.0
         version: 2.3.0
@@ -44,6 +44,13 @@ importers:
       sass:
         specifier: ^1.52.3
         version: 1.86.0
+    devDependencies:
+      '@types/jquery':
+        specifier: 3.5.1
+        version: 3.5.1
+      '@types/slick-carousel':
+        specifier: ^1.6.40
+        version: 1.6.40
 
 packages:
 
@@ -315,11 +322,20 @@ packages:
   '@types/cors@2.8.17':
     resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
 
+  '@types/jquery@3.5.1':
+    resolution: {integrity: sha512-Tyctjh56U7eX2b9udu3wG853ASYP0uagChJcQJXLUXEU6C/JiW5qt5dl8ao01VRj1i5pgXPAf8f1mq4+FDLRQg==}
+
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
 
   '@types/node@22.13.10':
     resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
+
+  '@types/sizzle@2.3.9':
+    resolution: {integrity: sha512-xzLEyKB50yqCUPUJkIsrVvoWNfFUbIZI+RspLWt8u+tIW/BetMBZtgV2LY/2o+tYH8dRvQ+eoPf3NdhQCcLE2w==}
+
+  '@types/slick-carousel@1.6.40':
+    resolution: {integrity: sha512-r56PBGVLYHmZvFSV+UC4dYbnpEu3LGzgJiSSixBx5ME+IUhsyho1XP7gKSG0R9tiYSx54ftq/g+miLQTbA10Dw==}
 
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
@@ -1197,8 +1213,8 @@ packages:
     engines: {node: '>= 0.10'}
     hasBin: true
 
-  gulp-embed-lqip-as-background@0.0.10:
-    resolution: {integrity: sha512-iQEZCj9EMqGig6gOX03Y5lFooGvltDf/2mlwgt2qvIJIi5eqGBC0v5IqTMn4Ry+5qPLtvO4g1w5PuwZBZJ2nJg==}
+  gulp-embed-lqip-as-background@0.0.11:
+    resolution: {integrity: sha512-78zg4EfQgsPa7rIQtKUxS2WBFa+cMP9Qj2OYmavf5FvqYrXr/v861L3CBuhP+Q4HydQyZavjTguadnOZ4m2/vA==}
     engines: {node: '>=10'}
 
   gulp-file-include@2.3.0:
@@ -2892,11 +2908,21 @@ snapshots:
     dependencies:
       '@types/node': 22.13.10
 
+  '@types/jquery@3.5.1':
+    dependencies:
+      '@types/sizzle': 2.3.9
+
   '@types/node@16.9.1': {}
 
   '@types/node@22.13.10':
     dependencies:
       undici-types: 6.20.0
+
+  '@types/sizzle@2.3.9': {}
+
+  '@types/slick-carousel@1.6.40':
+    dependencies:
+      '@types/jquery': 3.5.1
 
   abort-controller@3.0.0:
     dependencies:
@@ -3985,7 +4011,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gulp-embed-lqip-as-background@0.0.10:
+  gulp-embed-lqip-as-background@0.0.11:
     dependencies:
       cheerio: 1.0.0
       jimp: 0.16.13

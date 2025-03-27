@@ -35,83 +35,39 @@
       color: #fff;
     }
   }
-  .shots-slider {
-    $height: 580px;
-    $plusHeight: 32px;
-    .owl-stage {
-      max-height: calc($height + $plusHeight);
+  // .shots-slider {
+}
+
+// Carousels
+.slick-carousel {
+  position: relative;
+  // $height: 580px;
+  // $plusHeight: 32px;
+  // .owl-stage {
+  //   max-height: calc($height + $plusHeight);
+  //   overflow: hidden;
+  // }
+  .item {
+    display: block;
+    padding: 10px;
+    img {
+      // height: $height;
+      // margin-bottom: 0.5em;
+      // border-radius: 10px;
+      margin-bottom: 0.5em;
+      border-radius: 10px;
+      height: auto;
+    }
+    p {
+      padding-top: 10px;
+      font-family: $secondary-font;
+      font-style: italic;
       overflow: hidden;
-    }
-    .item {
-      img {
-        height: $height;
-        margin-bottom: 0.5em;
-        border-radius: 10px;
-      }
-      p {
-        font-family: $secondary-font;
-        font-style: italic;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #fff;
-        opacity: 0.5;
-      }
-    }
-    @media (width < 600px) {
-      $height: 500px;
-      .owl-stage {
-        max-height: calc($height + $plusHeight);
-      }
-      .item img {
-        height: $height;
-      }
-    }
-    @media (width < 500px) {
-      $height: 400px;
-      .owl-stage {
-        max-height: calc($height + $plusHeight);
-      }
-      .item img {
-        height: $height;
-      }
-      .item p {
-        display: none;
-      }
-    }
-    @media (width < 400px) {
-      $height: 300px;
-      .owl-stage {
-        max-height: calc($height + $plusHeight);
-      }
-      .item img {
-        height: $height;
-      }
-    }
-    @media (width < 300px) {
-      $height: 200px;
-      .owl-stage {
-        max-height: calc($height + $plusHeight);
-      }
-      .item img {
-        height: $height;
-      }
-    }
-
-    // Owl dot Active color overide
-    .owl-dots {
-      .owl-dot {
-        &:hover {
-          span {
-            background: $primary-color;
-          }
-        }
-
-        &.active {
-          span {
-            background: $primary-color;
-          }
-        }
-      }
+      text-overflow: ellipsis;
+      color: #fff;
+      opacity: 0.5;
+      max-width: 100%;
+      font-size: 90%;
     }
   }
 }
