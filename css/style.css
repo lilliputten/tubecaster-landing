@@ -826,63 +826,29 @@ button:focus,
 .shots > .section-title > * {
   color: #fff;
 }
-.shots .shots-slider .owl-stage {
-  max-height: 612px;
-  overflow: hidden;
+
+.slick-carousel {
+  position: relative;
 }
-.shots .shots-slider .item img {
-  height: 580px;
+.slick-carousel .item {
+  display: block;
+  padding: 10px;
+}
+.slick-carousel .item img {
   margin-bottom: 0.5em;
   border-radius: 10px;
+  height: auto;
 }
-.shots .shots-slider .item p {
+.slick-carousel .item p {
+  padding-top: 10px;
   font-family: "Lora", serif;
   font-style: italic;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #fff;
   opacity: 0.5;
-}
-@media (width < 600px) {
-  .shots .shots-slider .owl-stage {
-    max-height: 532px;
-  }
-  .shots .shots-slider .item img {
-    height: 500px;
-  }
-}
-@media (width < 500px) {
-  .shots .shots-slider .owl-stage {
-    max-height: 432px;
-  }
-  .shots .shots-slider .item img {
-    height: 400px;
-  }
-  .shots .shots-slider .item p {
-    display: none;
-  }
-}
-@media (width < 400px) {
-  .shots .shots-slider .owl-stage {
-    max-height: 332px;
-  }
-  .shots .shots-slider .item img {
-    height: 300px;
-  }
-}
-@media (width < 300px) {
-  .shots .shots-slider .owl-stage {
-    max-height: 232px;
-  }
-  .shots .shots-slider .item img {
-    height: 200px;
-  }
-}
-.shots .shots-slider .owl-dots .owl-dot:hover span {
-  background: #c122b4;
-}
-.shots .shots-slider .owl-dots .owl-dot.active span {
-  background: #c122b4;
+  max-width: 100%;
+  font-size: 90%;
 }
 
 /* homepage 3 */
