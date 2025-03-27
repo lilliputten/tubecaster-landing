@@ -6,6 +6,7 @@
   // ----------------------------
   // AOS
   // ----------------------------
+
   // @ts-ignore
   AOS.init({
     once: true,
@@ -50,7 +51,6 @@
     // -----------------------------
     //  Shots Slider
     // -----------------------------
-    /*
 
     /** @type {JQuerySlickOptions} */
     const defaultCarouselSettings = {
@@ -59,7 +59,7 @@
       dots: true,
       arrows: false,
 
-      lazyLoad: "ondemand",
+      // lazyLoad: "ondemand",
 
       infinite: true,
       speed: 1000,
