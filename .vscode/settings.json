@@ -1,5 +1,6 @@
 {
   "search.exclude": {
+    "source/plugins": true,
     "source-unused": true,
     "theme": true,
     "static": true,
@@ -10,6 +11,5 @@
     "publish": true
   },
   "git.ignoreLimitWarning": true,
-  "CodeGPT.apiKey": "CodeGPT Plus Beta",
   "findUnusedExports.detectCircularImports": true
 }

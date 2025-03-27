@@ -11,7 +11,7 @@ At the same time it's a playground for [Gulp LQIP small image placeholder genera
 
 ## Build info (auto-generated)
 
-- Project info: tubecaster-landing v.0.0.4 / 2025.03.23 01:11:49 +0300
+- Project info: tubecaster-landing v.0.0.5 / 2025.03.27 06:26:24 +0300
 
 ## Resources
 
