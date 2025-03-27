@@ -104,6 +104,8 @@
                 // Stop watching and load the slickSlider
                 initCarousel(/** @type {HTMLElement} */ (element.target));
                 observer.unobserve(element.target);
+                // Trick to allow to catch following AOS observers
+                window.dispatchEvent(new Event('resize'));
               }
             });
           };
