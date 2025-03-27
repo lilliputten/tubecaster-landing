@@ -59,7 +59,7 @@
       dots: true,
       arrows: false,
 
-      lazyLoad: "ondemand",
+      // lazyLoad: "ondemand",
 
       infinite: true,
       speed: 1000,
