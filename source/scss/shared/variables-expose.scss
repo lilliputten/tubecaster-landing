@@ -4,6 +4,11 @@
 @import 'variables';
 
 :root {
+  // Colors
+
+  --primaryColor: #{$primaryColor};
+  --secondaryColor: #{$secondaryColor};
+
   // Timeouts...
 
   --momentTimeMs: #{$momentTimeMs};

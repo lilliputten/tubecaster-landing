@@ -1,5 +1,16 @@
 @import "shared";
 
-.color-primary {
-  color: $primary-color;
+.color-primary,
+.primaryColor {
+  color: var(--primaryColor);
+}
+.color-secondary,
+.secondaryColor {
+  color: var(--secondaryColor);
+}
+.primaryBgColor {
+  background-color: var(--primaryColor);
+}
+.secondaryBgColor {
+  background-color: var(--secondaryColor);
 }

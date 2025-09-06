@@ -1,0 +1,15 @@
+@use "sass:color";
+
+@import "shared";
+
+.HeroSection {
+  border: 1px solid green;
+  .HeroClip {
+    border: 1px solid red;
+    overflow: hidden;
+    max-height: 200px;
+  }
+  .HeroImage {
+    border-radius: 4vw;
+  }
+}

@@ -14,6 +14,20 @@
   }
 }
 
+.btn-rounded-icon {
+  border-radius: 100px;
+  color: $light;
+  border: 1px solid $light;
+  padding: 13px 50px;
+}
+
+.btn-white {
+  background: white;
+  color: $primary-color;
+}
+
+// Primary btn
+
 .btn-main {
   padding: 25px 45px;
   border-radius: 3px;
@@ -66,14 +80,56 @@
   }
 }
 
-.btn-white {
-  background: white;
-  color: $primary-color;
+// Secondary btn
+
+.btn-second {
+  padding: 25px 45px;
+  border-radius: 3px;
+  background: $secondary-color;
+  color: $light;
+  outline: none;
+
+  &:hover {
+    color: $light;
+  }
+
+  &:focus {
+    color: $light;
+    box-shadow: none;
+  }
 }
 
-.btn-rounded-icon {
-  border-radius: 100px;
+.btn-second-md {
+  padding: 17px 38px;
+  border-radius: 3px;
+  background: $secondary-color;
   color: $light;
-  border: 1px solid $light;
-  padding: 13px 50px;
+  outline: none;
+
+  &:hover {
+    color: $light;
+  }
+
+  &:focus {
+    color: $light;
+    box-shadow: none;
+  }
+}
+
+.btn-second-sm {
+  padding: 15px 35px;
+  border-radius: 3px;
+  background: $secondary-color;
+  color: $light;
+  outline: none;
+  font-size: 14px;
+
+  &:hover {
+    color: $light;
+  }
+
+  &:focus {
+    color: $light;
+    box-shadow: none;
+  }
 }
