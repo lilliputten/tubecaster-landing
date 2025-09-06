@@ -145,13 +145,17 @@
   text-align: center;
   background: $primary-color;
   color: $light;
-  transition: 0.3s;
   z-index: 999556;
   cursor: pointer;
-  display: none;
+  // display: none;
   border-radius: 50%;
+  transition: all 250ms;
+  &:not(.active) {
+    opacity: 0;
+    pointer-events: none;;
+  }
   &:hover {
-    background: #333;
+    background: $secondary-color;
   }
 
   @include tablet {

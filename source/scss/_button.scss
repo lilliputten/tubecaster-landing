@@ -28,15 +28,19 @@
 
 // Primary btn
 
+.btn-main-md,
+.btn-main-sm
 .btn-main {
   padding: 25px 45px;
-  border-radius: 3px;
+  border-radius: 8px;
   background: $primary-color;
+  // background: $secondary-color;
   color: $light;
   outline: none;
 
   &:hover {
     color: $light;
+    background: $primary-color;
   }
 
   &:focus {
@@ -47,89 +51,11 @@
 
 .btn-main-md {
   padding: 17px 38px;
-  border-radius: 3px;
-  background: $primary-color;
-  color: $light;
-  outline: none;
-
-  &:hover {
-    color: $light;
-  }
-
-  &:focus {
-    color: $light;
-    box-shadow: none;
-  }
+  border-radius: 6px;
 }
 
 .btn-main-sm {
   padding: 15px 35px;
-  border-radius: 3px;
-  background: $primary-color;
-  color: $light;
-  outline: none;
+  border-radius: 4px;
   font-size: 14px;
-
-  &:hover {
-    color: $light;
-  }
-
-  &:focus {
-    color: $light;
-    box-shadow: none;
-  }
-}
-
-// Secondary btn
-
-.btn-second {
-  padding: 25px 45px;
-  border-radius: 3px;
-  background: $secondary-color;
-  color: $light;
-  outline: none;
-
-  &:hover {
-    color: $light;
-  }
-
-  &:focus {
-    color: $light;
-    box-shadow: none;
-  }
-}
-
-.btn-second-md {
-  padding: 17px 38px;
-  border-radius: 3px;
-  background: $secondary-color;
-  color: $light;
-  outline: none;
-
-  &:hover {
-    color: $light;
-  }
-
-  &:focus {
-    color: $light;
-    box-shadow: none;
-  }
-}
-
-.btn-second-sm {
-  padding: 15px 35px;
-  border-radius: 3px;
-  background: $secondary-color;
-  color: $light;
-  outline: none;
-  font-size: 14px;
-
-  &:hover {
-    color: $light;
-  }
-
-  &:focus {
-    color: $light;
-    box-shadow: none;
-  }
 }

@@ -74,9 +74,15 @@
 
 /* homepage 3 */
 .gradient-banner {
-  padding: 100px 0 170px;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  // padding: 100px 0 170px;
   position: relative;
   overflow: hidden;
+  @media (width >= 768px) {
+    // padding-top: 50px;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -85,6 +91,7 @@
     transform: translateX(-50%);
     width: 200%;
     height: 200%;
+    z-index: -1;
     // border-radius: 50%;
     background-image: linear-gradient(
       45deg,
@@ -96,7 +103,7 @@
 }
 
 .pull-top {
-  margin-top: -100px;
+  margin-top: -70px;
 }
 
 .shapes-container {
@@ -106,6 +113,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 
   .shape {
     position: absolute;

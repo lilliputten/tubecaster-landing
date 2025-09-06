@@ -16,11 +16,14 @@
     //.Scroll to top show/hide
     const scrollToTop = $(".scroll-top-to");
     const scroll = $(window).scrollTop() || 0;
-    if (scroll >= 200) {
-      scrollToTop.fadeIn(200);
-    } else {
-      scrollToTop.fadeOut(100);
-    }
+    const isVisible = scroll >= 200;
+    console.log('scroll-top-to', isVisible);
+    scrollToTop.toggleClass("active", isVisible);
+    // if (scroll >= 200) {
+    //   scrollToTop.fadeIn(200);
+    // } else {
+    //   scrollToTop.fadeOut(100);
+    // }
   });
 
   // scroll-to-top

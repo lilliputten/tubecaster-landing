@@ -24,17 +24,21 @@
   </div>
   <div class="container">
     <div class="row align-items-center">
-      <div class="HeroContent col-md-6 order-2 order-md-1 text-center text-md-left my-4 pr-md-4">
+      <div class="HeroContent col-md-6 order-2 order-md-1 text-center text-md-left my-4 pe-md-5">
         <!-- Hero title -->
         <h1 class="activeBasicLinkWrapper text-white h2 _font-weight-bold mb-4">
           Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCasterBot!</a>
         </h1>
         <p class="text-white mb-5">The simple telegram bot designed to convert YouTube videos and audio podcasts
           for later listening (even offline) inside the Telegram app.</p>
-        <a href="https://t.me/tubecasterbot" target="_blank" class="activeBasicLink btn btn-second-md">Open in Telegram</a>
+        <a href="https://t.me/tubecasterbot" target="_blank" class="activeBasicLink btn btn-main-md">Open in
+          Telegram</a>
       </div>
       <div class="HeroClip col-md-6 text-center order-1 order-md-2 my-4">
-        <img class="HeroImage lazy-load img-fluid" src="images/hero/shot-in-frame-v2.jpg" alt="screenshot">
+        <div class="HeroWrapper overflow-hidden p-4">
+          <img class="HeroImage lazy-load img-fluid" src="images/hero/shot-in-frame-v2.jpg" alt="screenshot"
+            data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" />
+        </div>
       </div>
       <!--
       <div class="col-md-6 text-center order-1 order-md-2 my-4">
@@ -75,26 +79,30 @@
 <section id="general" class="feature section pt-0">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 ml-auto justify-content-center my-4">
+      <div class="col-lg-6 ms-auto justify-content-center my-4">
         <div class="image-content" data-aos="fade-right">
           <img class="lazy-load img-fluid rounded-lg" src="images/shots/help.jpg" alt="Help message.">
         </div>
       </div>
       <div class="col-lg-6 mr-auto align-self-center my-4">
         <div class="feature-content" data-aos="fade-left">
-          <h2 class="color-primary">Perfect for</h2>
+          <h2 class="color-secondary">Perfect for</h2>
           <ul>
             <li>For listening to talk shows, music, or videos that don’t contain a lot of video content.</li>
-            <li>For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.</li>
-            <li>This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).</li>
+            <li>For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.
+            </li>
+            <li>This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is
+              blocked, but Telegram is still available).</li>
           </ul>
-          <h2 class="color-primary">How to use</h2>
+          <h2 class="color-secondary">How to use</h2>
           <ul>
-            <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>. Request registration from menu or by <code>/register</code> command.</li>
+            <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external"
+                title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>.
+              Request registration from menu or by <code>/register</code> command.</li>
             <li><strong>Paste YouTube Link</strong> or share it from YouTube app.</li>
             <li><strong>Download MP3</strong> or listen it right from the chat.</li>
           </ul>
-          <h2 class="color-primary">Tech Insides</h2>
+          <h2 class="color-secondary">Tech Insides</h2>
           <ul>
             <li>A development branch of yt-dlp used for video processing (fetching info and audio tracks).</li>
             <li>The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.</li>
@@ -156,24 +164,31 @@
 <section id="features" class="feature section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 ml-auto align-self-center my-4">
+      <div class="col-lg-6 ms-auto align-self-center my-4">
         <div class="feature-content" data-aos="fade-right">
-          <h2 class="color-primary">Application Features</h2>
+          <h2 class="color-secondary">Application Features</h2>
           <ul>
-            <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
-            <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
-            <li>Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files contain incorrect meta information, in which case the only way out is to get real data using ffprobe.</li>
-            <li>Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is split into several smaller files before being sent to the user.</li>
+            <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on
+              the developer machine during troubleshooting process.</li>
+            <li>Different database providers for local development and production via prisma. (It’s the only to way to
+              use db on vercel hosting to switch to Postgres.)</li>
+            <li>Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files
+              contain incorrect meta information, in which case the only way out is to get real data using ffprobe.</li>
+            <li>Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is
+              split into several smaller files before being sent to the user.</li>
             <li>Testing with partial functional/local resources.</li>
-            <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
-            <li>Detecting delays in the processing queue. In this case, repeated messages are periodically sent indicating that the request is still being processed.</li>
+            <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot
+              only to registered users. Now all the new users are required to send a registration request.</li>
+            <li>Detecting delays in the processing queue. In this case, repeated messages are periodically sent
+              indicating that the request is still being processed.</li>
             <li><strong>Powered by mighty and cute kitties under the hood.</strong></li>
           </ul>
         </div>
       </div>
       <div class="col-lg-6 mr-auto justify-content-center my-4">
         <div class="image-content" data-aos="fade-left">
-          <img class="lazy-load img-fluid rounded-lg" src="images/shots/loading-audio-cat.jpg" alt="Audio downloading process.">
+          <img class="lazy-load img-fluid rounded-lg" src="images/shots/loading-audio-cat.jpg"
+            alt="Audio downloading process.">
         </div>
       </div>
     </div>
