@@ -14,6 +14,7 @@ if [ -z "$CONFIG_IMPORTED" ]; then
 
   # Project structure setup
   BUILD_FOLDER="build"
+  SOURCE_FOLDER="source"
   PUBLIC_FOLDER="public"
   PUBLISH_FOLDER="publish"
   PUBLISH_BRANCH="publish"
@@ -24,7 +25,7 @@ if [ -z "$CONFIG_IMPORTED" ]; then
 
   # Misc generated files (see update-build-variables.sh)
   PROJECT_INFO_FILE="$PUBLIC_FOLDER/project-info.txt"
-  PROJECT_HASH_FILE="$PUBLIC_FOLDER/project-hash.txt"
+  PROJECT_HASH_FILE="$SOURCE_FOLDER/partials/project-hash.txt"
   # PROJECT_INFO_JSON_FILE="lib/project-info.json"
 
   SRC_TAG_PREFIX="v" # "v" for default "v.X.Y.Z"
