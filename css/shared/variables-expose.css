@@ -1,4 +1,14 @@
 :root {
+  --primaryColor: #c122b4;
+  --secondaryColor: #02225B;
+  --bs-primary: #c122b4;
+  --bs-secondary: #02225B;
+  --violet-light-color: #6366f1;
+  --violet-medium-color: #8b5cf6;
+  --violet-light-color-rgb: 99, 102, 241;
+  --violet-medium-color-rgb: 139, 92, 246;
+  --bs-primary-rgb: 193, 34, 180;
+  --bs-secondary-rgb: 193, 34, 180;
   --momentTimeMs: 150ms;
   --transitionTimeMs: 250ms;
   --animationTimeMs: 500ms;

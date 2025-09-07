@@ -7,6 +7,10 @@
   <meta name="robots" content="index, follow">
   <title>TubeCaster | The Telegram Bot</title>
   <meta name="title" content="TubeCaster | The Telegram Bot">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800" rel="preload" as="style" crossorigin="">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Simple telegram bot aimed to convert youtube videos into audio podcasts for later listening (even in offline mode) inside the Telegram app.">
   <meta name="keywords" content="telegram, bot, python, flask, youtube">
@@ -22,8 +26,8 @@
   <meta content="https://tubecaster.lilliputten.com/images/og/splash-320x.png" property="twitter:image">
   <link rel="author" href="https://lilliputten.com/humans.txt">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="plugins/bootstrap-5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" type="text/css">
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/slick-carousel-1.8.1/slick/slick.min.css">
   <link rel="stylesheet" href="plugins/slick-carousel-1.8.1/slick/slick-theme.min.css">
   <link rel="stylesheet" href="plugins/aos/aos.css">
@@ -37,8 +41,12 @@
       class="navbar-toggler activeBasicLink" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="bi bi-list"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto activeTextLinkWrapper">
-            <li class="nav-item"><a class="nav-link" href="#general">General info</a>
+          <ul class="navbar-nav ms-auto activeTextLinkWrapper">
+            <li class="nav-item"><a class="nav-link" href="#usage">How to use</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#perfect-for">Perfect for</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Usage plans</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#screenshots">Screenshots</a>
             </li>
@@ -69,72 +77,160 @@
     </div>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6 order-2 order-md-1 text-center text-md-left my-4">
-          <h1 class="activeBasicLinkWrapper text-white _font-weight-bold mb-4">Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCasterBot!</a></h1>
+        <div class="HeroContent col-md-6 order-2 order-md-1 text-center text-md-left my-4 pe-md-5">
+          <h1 class="activeBasicLinkWrapper text-white h2 _font-weight-bold mb-4">Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCasterBot!</a></h1>
           <p class="text-white mb-5">The simple telegram bot designed to convert YouTube videos and audio podcasts for later listening (even offline) inside the Telegram app.</p><a href="https://t.me/tubecasterbot" target="_blank" class="activeBasicLink btn btn-main-md">Open in Telegram</a>
         </div>
-        <div class="col-md-6 text-center order-1 order-md-2 my-4">
-          <img class="lazy-load HeroImage img-fluid" src="images/hero/shot-in-frame.jpg" alt="screenshot" loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 208 464'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIABYACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APws+IX/AAVZ/wCCjOheNPi7oFn+098SoPh5f/FLxba+JrTSv2sdY0TW9VtrHxfrEkMQv9d8VeIP+EYlitHt7GT7FpNtp0KWsFne2Fxf+eLn7Klh4/U6eZVcBltTB0LxnGnmeBpYucYR5pfuGqtWNRr3VzUJ2ny01F1JKMvEpYuh/aVDL8RVzCTnUhGpGjhcXh6dSM6rjpmlXC4nBUbOavXnCdKnSXtZR9lCU1+w3wo/4KE/tR3fwt+G12vx7/aJ23XgDwdcL9p+PfirUbnE3h3TpB9o1CG2tYb6fDfvbyK2t4rqTdPHBCriNcKlPASqTlDCOMJTk4xlOjKUYuTcYyksLBNpWTfJC715Y7LtnicIpSUKOYRgpNQjLMqFWUY3fKpVI5dTjUklZOcYQjN+8oRTsvwk+JsHgvxB8WPG+iaXbWWreIL/AMY+Nd+n23hvTb7UJZbPU9SlmCy/23p10ssKQTymNd1zNFH56WzKpD+tl+CrZhVoYTB0JYrEVo2p0KMXOpNwhKpNQhG/O4wjOcrtK0ZXtZs8B+1qVJRp3nJymoxTbb5b9bq1rO+7Vr69P0d+E3hPXrT4V/DS1l0jVY5bb4f+DbeSN9Mu42SSHw5psboyNGCjKykFDypBB5FY18ozSjXrUqmX4uFSlVqU6kJUKilGcJuMotWdnGSafmjvjRqqMU6ck1FJq3VI+u/jh/wRC/bZ1f4i+N4fDPj79nPR9FTxPrdutvq3xV+KGqXl0sWpXdtPNO9j+zrpFrDFeIizppv2e7NkStpNqmqrAl4/nwzHAQp04YbDYqnTUIuUa1XD1puq7urJVIUKHLTlNtwp8rcE7SnUkuZ8dHKMVRUo1cRh6j9pXlF0qVehFU51XUjGUJV6/NUjzWlU5oqb1UKa90/QT4Uf8EC/2lbD4W/DWxufiN8C0uLPwB4OtJ1tfGXj+W2Wa38O6dDKtvLL8GoJZIA6MIpJIYZHjCs8UbEoPPnmVBzk/Z1dZSe8OrfmepHA1VGK9pT+FdJdj//Z'%3E%3C/image%3E%3C/svg%3E&quot;);"
-          width="208" height="464">
+        <div class="HeroClip col-md-6 text-center order-1 order-md-2 my-4">
+          <div class="HeroWrapper overflow-hidden p-4">
+            <img class="HeroImage lazy-load img-fluid" src="images/hero/shot-in-frame-v2.jpg" alt="screenshot" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 352 701'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIABQACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APwe8c/tw/tKeX+0BpEH7XP7Tnhu9l+LfxTg8S+C/CGu+M18M+I7Kz1jU5vAtxrktr4xtj4p1HVtYmutIu11H+z4NO0q1s1sU1e6he0j/Usvy3I8VhMDWxGJhSrRjmUMdSVP/a6Lp4fnyj+zcIsFWhmbxmKfs8a6uPy54WjaVD61UXsT5h4uty5nRccW8WlkqyGlhsPhq2AzCdfMqsOIf7ezGeb4TGZN/Z+XOFfKPqOScQyzLFJ4XF/2XQ5cVH76+Ef7YH7V5+FPwxNx8cfjBFcH4e+CzPG3j/xwhjmPhvTfNQo2uFkKPuUqSSpGDyK+XlRalJSoKMlJqUXRScZX1TTjdNPRp6rqdt68fdTq2WiupX00103PxC+L/wAI/EGn/FD4meIoNDurHVU+J3jXVdP1ex+JHiPTU8qTxNqNzbSxy22nedY3TNKsymCKd4DiyiMoAmHbh6MIYHno069LM4NypY2nmeIpKD5f3bjTXK4yi/f/AHcW7J07vm548UcbXoZnSrRrRjhqc4S9hTwMVX9yqpT5cXCpzxlKF6aqO0oykqttPZv9Qvhf4k8SSfDT4dyTa9rjzSeBfCTyvLrOoXMryNoGns7SXEswknkZiS80gDysS7gMxrOeOxznJzxmKnNyk5yeIrNyk23KTbm223dtt3bd3qdzxuIm3L6zX9583vV6kpa6+83K7eurerep/cL48/4N2P8Agml8RfFmq+LPFnhX426pquu395fXH2r4/fEe8t7NJp5LiHTdOXUdUvZrXStPEptdNsfPkjs7NI7eM7FOfDnneZ1knWxVSq6cKdODqt1HGFNcsIpybfLGKSitktrFwynL6ElChhqdGNSpVqzjTioRlUn705tRSTlOTvKT1k9W20e7+H/+CKH/AATv8OaDonh6x+EfieWy0HSNN0azlu/i38UpLqW10uzhsbeS5eHxZBE9w8UCNM8UEMbSFikUakIOV5him23U1bbfux669jrWCwySSholbd9Pmf/Z'%3E%3C/image%3E%3C/svg%3E&quot;);"
+            width="352" height="701">
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="TopBenefits section pt-0 position-relative pull-top">
+  <section id="usage" class="Steps section pt-0 pb-5 pull-top">
     <div class="container">
-      <div class="rounded shadow p-5 _bg-white">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center"><span class="Icon"><i class="bi bi-share-fill h1"></i></span>
-            <h3 class="mt-4 text-capitalize h5">Post a link to the bot</h3>
-            <p class="regular text-muted">Send/share a YouTube link and receive an audio file immediately.</p>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="steps-card h-100 p-4">
+            <div class="icon-wrapper mb-4">1</div>
+            <h4 class="steps-title text-center mb-3">Start Chat</h4>
+            <p class="steps-text text-center mb-0">Start chat with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>, use <code>/start</code>, <code>/help</code> or <code>/plans</code> commands
+              if you're there for the first time.</p>
           </div>
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center"><span class="Icon"><i class="bi bi-play-btn h1"></i></span>
-            <h3 class="mt-4 text-capitalize h5">Get video details</h3>
-            <p class="regular text-muted">Get detailed information about the YouTube video.</p>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="steps-card h-100 p-4">
+            <div class="icon-wrapper mb-4">2</div>
+            <h4 class="steps-title text-center mb-3">Select Usage Plan</h4>
+            <p class="steps-text text-center mb-0">Use default guest mode or request free plan via the <code>/become_user</code>, or buy an advanced usage plan via the <code>/get_full_access</code> command.</p>
           </div>
-          <div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center"><span class="Icon"><i class="bi bi-music-note-beamed h1"></i></span>
-            <h3 class="mt-4 text-capitalize h5">Download audio</h3>
-            <p class="regular text-muted">Download tracks for listening anywhere, anytime.</p>
-            <p></p>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="steps-card h-100 p-4">
+            <div class="icon-wrapper mb-4">3</div>
+            <h4 class="steps-title text-center mb-3">Send YouTube Link</h4>
+            <p class="steps-text text-center mb-0">Share a YouTube clip link from the application or just paste it into the chat. Use <code>/cast</code> command to download, or <code>/info</code> command to get the clip details.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="steps-card h-100 p-4">
+            <div class="icon-wrapper mb-4">4</div>
+            <h4 class="steps-title text-center mb-3">Download Audio</h4>
+            <p class="steps-text text-center mb-0">Download generated MP3 file or listen it right from the chat. Check your status and statistics with <code>/status</code> and <code>/stats</code> commands.</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col">
+          <p class="section-description bottom-description mb-2"><strong>NOTES:</strong> Please keep in mind that the bot is working in experimental mode and that Google may change its algorithms and API, which may lead to temporary disruptions in the application.</p>
+          <p class="section-description bottom-description mb-2">Also remember that downloading and processing audio files takes time and can take up to several minutes. If the bot has accepted your command for processing and it seems to you that the process has been delayed, please be patient. In case of
+            long-term operations, the bot will send you notifications about the active process every minute.</p>
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="general" class="feature section pt-0">
+  <section id="usage" class="Benefits section pt-4 pb-5">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 ml-auto justify-content-center my-4">
-          <div class="image-content" data-aos="fade-right">
-            <img class="lazy-load img-fluid rounded-lg" src="images/shots/help.jpg" alt="Help message." loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 800 752'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAkACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP5g9N+G+j2nwo8NWd58BNOk8eaR4a1JNV8Rr8W/GVpfeL9evRrc2jeKLuafWYrHw2mjx6rpEv8AYuk2dtY38eh2fmXNtPPeTXP7Lhsdw1SWW1sRllZ1MFlOOwWYZYpylTzbNa0eXB5t/acK8MXgZYGXNOOFwrVHESlD2koxpqJ8WqmKWX51gozozxuY55k+Y5LxJGMqeK4ayXBq+a5BSyazyzNlnMo0b5rmEfruVwhWhg6c5YiVSHzAni74gWaJaan4w8VSalaqttqDyeJNXnke+gAiu3kne7LzO06yFpWJaRiXY5JrwI5pmtlzZlj+ay5r43ES962uvtNdevXc9OpmWPnUqSWOxlpTlJf7TXWjk2tOfTR7dD7J1b/j2P8A2B4//TJDXN9qf+Nf+lHnQ+CP+GP5I8Ek/wBZJ/vt/wChGrGtl6L8j//Z'%3E%3C/image%3E%3C/svg%3E&quot;);"
-            width="800" height="752">
-          </div>
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h2 class="color-primary">It's a Perfect Solution</h2>
         </div>
-        <div class="col-lg-6 mr-auto align-self-center my-4">
-          <div class="feature-content" data-aos="fade-left">
-            <h2 class="color-primary">Perfect for</h2>
-            <ul>
-              <li>For listening to talk shows, music, or videos that don’t contain a lot of video content.</li>
-              <li>For busy users who prefer audio videos or who find it more convenient to listen to podcasts on the go.</li>
-              <li>This is essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).</li>
-            </ul>
-            <h2 class="color-primary">How to use</h2>
-            <ul>
-              <li><strong>Start Chat</strong> with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCaster</a>. Request registration from menu or by <code>/register</code> command.</li>
-              <li><strong>Paste YouTube Link</strong> or share it from YouTube app.</li>
-              <li><strong>Download MP3</strong> or listen it right from the chat.</li>
-            </ul>
-            <h2 class="color-primary">Tech Insides</h2>
-            <ul>
-              <li>A development branch of yt-dlp used for video processing (fetching info and audio tracks).</li>
-              <li>The bot itself is implemented using pyTelegramBotAPI v.4 and flask v.3.</li>
-            </ul>
+        <div class="row row-cols-1 row-cols-lg-3 g-4">
+          <div class="col-lg-4">
+            <div class="benefits-card h-100 p-4">
+              <div class="icon-wrapper mb-4">
+                <img src="images/icons/media.svg" width="90" height="90">
+              </div>
+              <p class="benefits-text text-center mb-0">For listening to talk shows, music, or videos that don’t contain a lot of video content.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="benefits-card h-100 p-4">
+              <div class="icon-wrapper mb-4">
+                <img src="images/icons/busy.svg" width="90" height="90">
+              </div>
+              <p class="benefits-text text-center mb-0">For busy users who prefer audio over video or who find it more convenient to listen to podcasts on the go.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="benefits-card h-100 p-4">
+              <div class="icon-wrapper mb-4">
+                <img src="images/icons/lock.svg" width="95" height="95">
+              </div>
+              <p class="benefits-text text-center mb-0">Essential to circumvent censorship blocks (as, for example, in modern Russia, where YouTube is blocked, but Telegram is still available).</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="screenshots" class="section shots gradient-banner">
+  <section id="pricing" class="Pricing section pt-0">
+    <div class="container py-0">
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h2 class="color-primary">Available Usage Plans</h2>
+          <p class="section-description text-muted">You can use a <strong>GUEST</strong> usage plan, available by default, request an experimental <strong>FREE</strong> plan (also free at the moment), or pay for an unlimited <strong>PAID</strong> plan. You can see all the plains details right in the
+            bot via <code>/plans</code> command.</p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100 pricing-card">
+            <div class="card-body p-5">
+              <h5 class="card-title mb-4">GUEST</h5>
+              <div class="price d-flex gap-1 align-items-center mb-4">
+                <img src="images/icons/telegram-star.svg" width="42" height="42">
+                <h1 class="display-5 m-0">0<small class="fw-light">/mo</small></h1>
+              </div>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check2 me-2"></i>2 audio file downloads</li>
+                <li><i class="bi bi-check2 me-2"></i>2 info requests</li>
+              </ul>
+              <p>This mode is intended only for familiarization with the service in trial mode.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 pricing-card">
+            <div class="card-body p-5">
+              <h5 class="card-title mb-4">FREE</h5>
+              <div class="price d-flex gap-1 align-items-center mb-4">
+                <img src="images/icons/telegram-star.svg" width="42" height="42">
+                <h1 class="display-5 m-0">0<small class="fw-light">/mo</small></h1>
+              </div>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check2 me-2"></i>10 audio file downloads/mo</li>
+                <li><i class="bi bi-check2 me-2"></i>10 info requests/mo</li>
+              </ul>
+              <p>Currently, this data plan is available for free if you send a request to the administrator using the <code>/become_user</code> command.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 pricing-card"><span class="badge gradient-custom text-white popular-badge px-4 py-2">UNLIMITED</span>
+            <div class="card-body p-5">
+              <h5 class="card-title mb-4">PAID</h5>
+              <div class="price d-flex gap-1 align-items-center mb-4">
+                <img src="images/icons/telegram-star.svg" width="42" height="42">
+                <h1 class="display-5 m-0">100<small class="fw-light">/mo</small></h1>
+              </div>
+              <ul class="list-unstyled feature-list">
+                <li><i class="bi bi-check2 me-2"></i>Unlimited audio file downloads</li>
+                <li><i class="bi bi-check2 me-2"></i>Unlimited info requests</li>
+              </ul>
+              <p>You can pay for this plain right in the bot via the <code>/get_full_access</code> command.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="screenshots" class="Screenshots section gradient-banner">
     <div class="section-title" data-aos="fade-right">
       <h2>Screenshots</h2>
     </div>
@@ -176,29 +272,26 @@
       </div>
     </div>
   </section>
-  <section id="features" class="feature section">
+  <section id="features" class="Features section pt-5 pb-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 ml-auto align-self-center my-4">
-          <div class="feature-content" data-aos="fade-right">
-            <h2 class="color-primary">Application Features</h2>
-            <ul>
-              <li>Remote realtime logging via http or syslog. It’s possible to receive application logs in the realtime on the developer machine during troubleshooting process.</li>
-              <li>Different database providers for local development and production via prisma. (It’s the only to way to use db on vercel hosting to switch to Postgres.)</li>
+        <div class="col-lg-6 m-auto d-flex align-items-center justify-content-center my-4">
+          <div class="image-content d-flex align-items-center justify-content-center" data-aos="fade-right">
+            <img class="lazy-load img-fluid rounded-circle" src="images/shots/loading-audio-cat-circle.jpg" alt="Audio downloading process powered by cats" width="730" height="730" loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 730 730'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAoACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APib43618Vx40+KnjrV/jb+2H4f/AG/7H41eObH4D/Bfwlf3mk/s92Xw30PxrHZ/D2wXw83hXXrzxrbeLfDematbWelaJCvhzxlPq2gX3ifWYPM8U3lx+z5nj+JP9ZcSo5jGhWo4ucMPg/b4r2zipTeGo0cLTjKjKnXpqioc6ca0aqq1HJTlNfLSnhaeDcnhc2rYx1IwprD4WX1RwlVpwdeeJqxjRcKMZzlVUKvNy0ZwhB1bRn/UHov9tzaNpMuuWiWmty6ZYSaxa2ZkltLbVXtYm1C3tZSXMlvDdmaOCQuxeJVYs2cn93g5uEHUSU3GLmo6pTsuZJ63Sd0tdjA6e1srKRre8ktLV7uFJYYbp7eJrmKKRpDJFFOyGWONzy6KwVj94Gjki5KbjFzSaUrLmSe6UrXSfVJiez9Ganlx/wDPNP8Avlf8KoFsvRH/2Q=='%3E%3C/image%3E%3C/svg%3E&quot;);">
+          </div>
+        </div>
+        <div class="col-lg-6 ms-auto align-self-center my-4">
+          <div class="feature-content" data-aos="fade-left">
+            <h2 class="color-primary mb-4">Application Features</h2>
+            <ul class="list-checked">
+              <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
+              <li>There is also exists an ability to to pay (via telegram stars) for unlimited access. See <a href="#pricing">pricing details</a>.</li>
               <li>Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files contain incorrect meta information, in which case the only way out is to get real data using ffprobe.</li>
               <li>Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is split into several smaller files before being sent to the user.</li>
-              <li>Testing with partial functional/local resources.</li>
-              <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot only to registered users. Now all the new users are required to send a registration request.</li>
-              <li>Detecting delays in the processing queue. In this case, repeated messages are periodically sent indicating that the request is still being processed.</li>
+              <li>Detecting delays in the processing queue. In this case, repeated messages are periodically (each minute) sent indicating that the request is still being processed.</li>
               <li><strong>Powered by mighty and cute kitties under the hood.</strong>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="col-lg-6 mr-auto justify-content-center my-4">
-          <div class="image-content" data-aos="fade-left">
-            <img class="lazy-load img-fluid rounded-lg" src="images/shots/loading-audio-cat.jpg" alt="Audio downloading process." loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 800 794'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAoACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP5+f2hfDHwm8ffCn4MeGvhF8GPAvwr8XeA/DGgaf428daPL471LWPjHrA8MaXYeIfF/jC71TXvE9rYXmpazpx1nTtE8OeGfDWj6VNq2sxZuoDZ/Zfu1QspySx9SrOV1CtTw9OlTjzTbilCpJ8yThFScteWTaTklH5Oti1WdCDo5XhKdKnJV69LH4vG18VWtRjTmoSyrBQoU9K0qkOau+acEp2pyc/zNu7c2l1c2plguDbXE1uZ7WTzbaYwyNH5tvLhfNgk274pNo3xsrYGcVBm9G1dPXdXs/NXSdn5pPuj2zxBq+q6jq13dahqeoX9y72Ze4vL25up3OUiy008jyMfKjjj5Y/u0RPuqoHTialSVecpTnKXu6yk2/gj1buZ4OnTjQpxjThGKUrJRikv3k9klZHJfarn/AJ+J/wDv9J/8VXPd9397Lsuy+5H/2Q=='%3E%3C/image%3E%3C/svg%3E&quot;);"
-            width="800" height="794">
           </div>
         </div>
       </div>
@@ -228,7 +321,7 @@
   <div class="scroll-top-to"><i class="bi bi-chevron-up"></i>
   </div>
   <script src="plugins/jquery/jquery-3.5.1.min.js"></script>
-  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/bootstrap-5.3.2/dist/js/bootstrap.min.js"></script>
   <script src="plugins/slick-carousel-1.8.1/slick/slick.min.js"></script>
   <script src="plugins/aos/aos.js"></script>
   <script src="js/script.js"></script>
