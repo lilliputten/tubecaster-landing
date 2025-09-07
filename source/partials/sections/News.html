@@ -1,0 +1,51 @@
+<!-- News {{{ -->
+<section id="news" class="News section pt-0">
+
+  <div class="container py-4">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="color-primary">Project News</h2>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-lg-1 g-4">
+
+      <!-- news-card -->
+      <div class="col">
+        <div class="card news-card">
+          <div class="card-body">
+            <p class="date">2025.09.05</p>
+            <h3 class="card-title">Implemented usage control and usage plans</h3>
+            <ul class="list-checked">
+              <li>Added <code>UserStatus</code> data model. Added new bot commands: <code>status</code>, <code>plans</code>, <code>become_user</code>, <code>get_full_access</code>, <code>remove_account</code>, <code>restore_account</code>. Updated dialog texts and messages. Users divided by 3 groups: guests, free and paid tiers. Guests and free users have limits (defined by constants in <code>botCore/constants/limits.py</code>). Added new db actions: <code>collectStats</code>, <code>updateStats</code>, <code>ensureValidUser</code>, <code>findUser</code>. Added new core bot helpers: <code>addNewValidUser</code>, <code>checkValidUser</code>, <code>createAcceptNewUserButtonsMarkup</code>, <code>createSendRegistrationReguestButtonsMarkup</code>, <code>sendNewUserRequestToController</code>, <code>showNewUserMessage</code>. Added api methods: <code>downloadAndSendAudioToChat</code>, <code>sendInfoToChat</code>, <code>sendStatsToChat</code>. Added ability to remove (to mark to removal in a month) and restore (in a month) user's account.</li>
+              <li>Already replaced an old checkValidUser/showNewUserMessage valid user checking method with a new checkUserLimitations/showOutOfLimitsMessage.</li>
+              <li>Connected telegram XTR invoice payment.</li>
+              <li>Updated minor project version: 0.1.1.</li>
+            </ul>
+            <p class="details"><a href="https://github.com/lilliputten/tubecaster-telegram-bot/releases/tag/v.0.1.1" target="_blank" rel="noopener">v.0.1.1</a> | <a href="https://github.com/lilliputten/tubecaster-telegram-bot/compare/v.0.0.16...v.0.1.1" target="_blank" rel="noopener">Compare with the previous version</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- news-card -->
+      <div class="col">
+        <div class="card news-card">
+          <div class="card-body">
+            <p class="date">2025.09.02</p>
+            <h3 class="card-title">Added user statistics</h3>
+            <ul class="list-checked">
+              <li>Added a function to send stats info to the chat, via the <code>/stats</code> command.</li>
+              <li>Added <code>updateStats</code> calls in <code>downloadAndSendAudioToChat</code> and <code>sendInfoToChat</code> functions.</li>
+              <li>Added <code>updateStats</code> database action (aimed to update the current user' stats records).</li>
+              <li>Updated prisma data models to maintain stats data (<code>TotalStats</code> and <code>MonthlyStats</code>).</li>
+            </ul>
+            <p class="details"><a href="https://github.com/lilliputten/tubecaster-telegram-bot/releases/tag/v.0.0.16" target="_blank" rel="noopener">v.0.0.16</a> | <a href="https://github.com/lilliputten/tubecaster-telegram-bot/compare/v.0.0.15...v.0.0.16" target="_blank" rel="noopener">Compare with the previous version</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<!-- }}} News -->
