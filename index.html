@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="plugins/slick-carousel-1.8.1/slick/slick.min.css">
   <link rel="stylesheet" href="plugins/slick-carousel-1.8.1/slick/slick-theme.min.css">
   <link rel="stylesheet" href="plugins/aos/aos.css">
-  <link href="css/style.css?v.0.0.6-250907-0802" rel="stylesheet">
+  <link href="css/style.css?v.0.0.6-250907-2245" rel="stylesheet">
 </head>
 
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
@@ -78,8 +78,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="HeroContent col-md-6 order-2 order-md-1 text-center text-md-left my-4 pe-md-5">
-          <h1 class="activeBasicLinkWrapper text-white h2 _font-weight-bold mb-4">Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank">@TubeCasterBot!</a></h1>
-          <p class="text-white mb-5">The simple telegram bot designed to convert YouTube videos and audio podcasts for later listening (even offline) inside the Telegram app.</p><a href="https://t.me/tubecasterbot" target="_blank" class="activeBasicLink btn btn-main-md">Open in Telegram</a>
+          <h1 class="activeBasicLinkWrapper text-white h2 _font-weight-bold mb-4">Meet the <a class="color-primary" href="https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCasterBot!</a></h1>
+          <p class="text-white mb-5">The simple telegram bot designed to convert YouTube videos and audio podcasts for later listening (even offline) inside the Telegram app.</p><a href="https://t.me/tubecasterbot" target="_blank" rel="noopener" class="activeBasicLink btn btn-main-md">Open in Telegram</a>
         </div>
         <div class="HeroClip col-md-6 text-center order-1 order-md-2 my-4">
           <div class="HeroWrapper overflow-hidden p-4">
@@ -96,7 +96,7 @@
         <div class="col-md-6 col-xl-3">
           <div class="steps-card h-100 p-4">
             <div class="icon-wrapper mb-4">1</div>
-            <h4 class="steps-title text-center mb-3">Start Chat</h4>
+            <h4 class="steps-title text-center mb-3">Start Chatting</h4>
             <p class="steps-text text-center mb-0">Start chatting with <a href="https://t.me/tubecasterbot" c="l" class="external" title="External link: https://t.me/tubecasterbot" target="_blank" rel="noopener">@TubeCasterBot</a>, use <code>/start</code>, <code>/help</code> or <code>/plans</code> commands
               if you're there for the first time.</p>
           </div>
@@ -138,7 +138,7 @@
     <div class="container">
       <div class="row text-center mb-5">
         <div class="col">
-          <h2 class="color-primary">It's a Perfect Solution, if...</h2>
+          <h2 class="color-primary">A Perfect Solution, if...</h2>
         </div>
       </div>
       <div class="row row-cols-1 row-cols-lg-3 g-4">
@@ -147,7 +147,7 @@
             <div class="icon-wrapper mb-4">
               <img src="images/icons/media.svg" width="90" height="90">
             </div>
-            <p class="benefits-text text-center mb-0">You like to listen to talk shows, music, or even videos, if they contain more conversational content, than action scenes.</p>
+            <p class="benefits-text text-center mb-0">...Like to listen to talk shows, music, or even videos, if they contain more conversational content, than action scenes.</p>
           </div>
         </div>
         <div class="col">
@@ -155,7 +155,7 @@
             <div class="icon-wrapper mb-4">
               <img src="images/icons/busy.svg" width="90" height="90">
             </div>
-            <p class="benefits-text text-center mb-0">You're a pretty busy user who prefer audio over video or who find it more convenient to listen to podcasts on the go.</p>
+            <p class="benefits-text text-center mb-0">...A pretty busy person, who prefer audio over video or who find it more convenient to listen to podcasts on the go.</p>
           </div>
         </div>
         <div class="col">
@@ -163,14 +163,14 @@
             <div class="icon-wrapper mb-4">
               <img src="images/icons/lock.svg" width="95" height="95">
             </div>
-            <p class="benefits-text text-center mb-0">If you are in a country that blocks YouTube due to censorship or other reasons, but Telegram is still available there (for some reason).</p>
+            <p class="benefits-text text-center mb-0">...In a country that blocks YouTube due to censorship or other reasons, but Telegram is still available there (for some reason).</p>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section id="pricing" class="Pricing section pt-0">
-    <div class="container py-0">
+    <div class="container py-4">
       <div class="row text-center mb-5">
         <div class="col">
           <h2 class="color-primary">Available Usage Plans</h2>
@@ -297,6 +297,54 @@
       </div>
     </div>
   </section>
+  <section id="news" class="News section pt-0">
+    <div class="container py-4">
+      <div class="row text-center mb-5">
+        <div class="col">
+          <h2 class="color-primary">Project News</h2>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-1 g-4">
+        <div class="col">
+          <div class="card news-card">
+            <div class="card-body">
+              <p class="date">2025.09.05</p>
+              <h3 class="card-title">Implemented usage control and usage plans</h3>
+              <ul class="list-checked">
+                <li>Added <code>UserStatus</code> data model. Added new bot commands: <code>status</code>, <code>plans</code>, <code>become_user</code>, <code>get_full_access</code>, <code>remove_account</code>, <code>restore_account</code>. Updated dialog texts
+                  and messages. Users divided by 3 groups: guests, free and paid tiers. Guests and free users have limits (defined by constants in <code>botCore/constants/limits.py</code>). Added new db actions: <code>collectStats</code>, <code>updateStats</code>, <code>ensureValidUser</code>, <code>findUser</code>.
+                  Added new core bot helpers: <code>addNewValidUser</code>, <code>checkValidUser</code>, <code>createAcceptNewUserButtonsMarkup</code>, <code>createSendRegistrationReguestButtonsMarkup</code>, <code>sendNewUserRequestToController</code>, <code>showNewUserMessage</code>.
+                  Added api methods: <code>downloadAndSendAudioToChat</code>, <code>sendInfoToChat</code>, <code>sendStatsToChat</code>. Added ability to remove (to mark to removal in a month) and restore (in a month) user's account.</li>
+                <li>Already replaced an old checkValidUser/showNewUserMessage valid user checking method with a new checkUserLimitations/showOutOfLimitsMessage.</li>
+                <li>Connected telegram XTR invoice payment.</li>
+                <li>Updated minor project version: 0.1.1.</li>
+              </ul>
+              <p class="details"><a href="https://github.com/lilliputten/tubecaster-telegram-bot/releases/tag/v.0.1.1" target="_blank" rel="noopener">v.0.1.1</a> | <a href="https://github.com/lilliputten/tubecaster-telegram-bot/compare/v.0.0.16...v.0.1.1" target="_blank"
+                rel="noopener">Compare with the previous version</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card news-card">
+            <div class="card-body">
+              <p class="date">2025.09.02</p>
+              <h3 class="card-title">Added user statistics</h3>
+              <ul class="list-checked">
+                <li>Added a function to send stats info to the chat, via the <code>/stats</code> command.</li>
+                <li>Added <code>updateStats</code> calls in <code>downloadAndSendAudioToChat</code> and <code>sendInfoToChat</code> functions.</li>
+                <li>Added <code>updateStats</code> database action (aimed to update the current user' stats records).</li>
+                <li>Updated prisma data models to maintain stats data (<code>TotalStats</code> and <code>MonthlyStats</code>).</li>
+              </ul>
+              <p class="details"><a href="https://github.com/lilliputten/tubecaster-telegram-bot/releases/tag/v.0.0.16" target="_blank" rel="noopener">v.0.0.16</a> | <a href="https://github.com/lilliputten/tubecaster-telegram-bot/compare/v.0.0.15...v.0.0.16" target="_blank"
+                rel="noopener">Compare with the previous version</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="footer-main">
       <div class="container">
@@ -305,9 +353,9 @@
             <div class="block"><span class="navbar-brand" href="/"><img class="lazy-load" src="images/logo.png" alt="Tubecaster logo" loading="lazy" style="background-size: cover; background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http%3A//www.w3.org/2000/svg' xmlns%3Axlink='http%3A//www.w3.org/1999/xlink' viewBox='0 0 48 48'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='.5'%3E%3C/feGaussianBlur%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='1 1'%3E%3C/feFuncA%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Cimage filter='url(%23b)' preserveAspectRatio='none' height='100%25' width='100%25' xlink%3Ahref='data%3Aimage/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABeUlEQVR4AQXBPU8TYQDA8f8991DuelcuEgpSoEhLoQiNwVgaYAAjLobBD8EHYWMxjkwkDro5OBASiBsaEvEFjQEGICGhymubU5trfXq9h9/PGBt6pIVhILTBSCrDmJchiiL2Lg4o++c0tEKjEaYwKTg5VheWKTXzRApU0GLOKPLi6TJ9sR4s00JqUyKSd3n58TVLK0tMzxVRdcXGmw3evlqnp3+YWvknIi7jlGbm6cjnyT0o4nkuTsxm+uE89p02ZksLxM12RLorjf+nSXIwxddTn0rjP9ci5FRF2Nlh/BgkbBdZWHyOM5ClvLbJ8WNBcvsvTa05OmzS+hUy0teJNTWBLH/5zs1+SKoKx1VFZ7fBdRihREC9VifY28V90ouUNxUmcxXup13E+x9kSt24lkZ92+GyYNMwLXa2DpDtboKOkzPsRIwguOLdp336/1V4lnVwGxGHPqTjLnLCGycR1Gh5JrvqN9sfPpMKfe6NDjHpDDDae4VTHecW8OOIXGO4DF0AAAAASUVORK5CYII='%3E%3C/image%3E%3C/svg%3E&quot;);" width="48" height="48"> <span>Tubecaster Telegram Bot</span></span>
               <ul
               class="social-icon list-inline">
-                <li class="list-inline-item"><a href="https://t.me/tubecasterbot" target="_blank"><i class="bi bi-telegram color-primary"></i></a>
+                <li class="list-inline-item"><a href="https://t.me/tubecasterbot" target="_blank" rel="noopener"><i class="bi bi-telegram color-primary"></i></a>
                 </li>
-                <li class="list-inline-item"><a href="https://github.com/lilliputten/tubecaster-telegram-bot" target="_blank"><i class="bi bi-github color-primary"></i></a>
+                <li class="list-inline-item"><a href="https://github.com/lilliputten/tubecaster-telegram-bot" target="_blank" rel="noopener"><i class="bi bi-github color-primary"></i></a>
                 </li>
                 </ul>
             </div>
@@ -315,7 +363,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center bg-dark py-4"><small class="text-secondary">Copyright ©<script>document.write(new Date().getFullYear())</script>. Developed by <a href="https://lilliputten.com/projects/2025/tubecaster-telegram-bot/" target="_blank">lilliputten.com</a></small>
+    <div class="text-center bg-dark py-4"><small class="text-secondary">Copyright ©<script>document.write(new Date().getFullYear())</script>. Developed by <a href="https://lilliputten.com/projects/2025/tubecaster-telegram-bot/" target="_blank" rel="noopener">lilliputten.com</a></small>
     </div>
   </footer>
   <div class="scroll-top-to"><i class="bi bi-chevron-up"></i>
@@ -324,7 +372,7 @@
   <script src="plugins/bootstrap-5.3.2/dist/js/bootstrap.min.js"></script>
   <script src="plugins/slick-carousel-1.8.1/slick/slick.min.js"></script>
   <script src="plugins/aos/aos.js"></script>
-  <script src="js/script.js?v.0.0.6-250907-0802"></script>
+  <script src="js/script.js?v.0.0.6-250907-2245"></script>
 </body>
 
 </html>

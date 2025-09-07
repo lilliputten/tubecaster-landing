@@ -2020,4 +2020,24 @@ hr {
 .Features .image-content {
   max-width: 500px;
 }
+.News .news-card ul, .News .news-card ol, .News .news-card p {
+  margin: 0.5em 0;
+}
+.News .news-card .card-title {
+  margin-bottom: 0.75em;
+  font-size: 140%;
+  color: #c122b4;
+  font-weight: 500;
+}
+.News .news-card .details,
+.News .news-card .date {
+  font-size: 85%;
+  opacity: 0.5;
+}
+.News .news-card .details {
+  margin: 1.25em 0;
+}
+.News .news-card .card-body {
+  padding: 1em 1.5em;
+}
 /*# sourceMappingURL=style.css.map */
