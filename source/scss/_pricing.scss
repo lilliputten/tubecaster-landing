@@ -1,0 +1,74 @@
+@use "sass:color";
+
+.Pricing {
+  $dark0Color: color.adjust($primaryColor, $lightness: -10%);
+  $dark1Color: color.adjust($primaryColor, $lightness: -20%);
+  $dark2Color: color.adjust($primaryColor, $lightness: -30%);
+
+  .col {
+    .pricing-card {
+      transition: all 250ms;
+      border-radius: 15px;
+
+      background-color: $primaryColor;
+
+      color: #fff;
+      box-shadow: var(--bs-box-shadow);
+
+      code {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      p,
+      h1,
+      .card-title {
+        color: #fff;
+      }
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .fw-light,
+      i.bi {
+        opacity: 0.5;
+      }
+
+      p {
+        font-size: 85%;
+        &.small {
+          font-size: 80%;
+        }
+      }
+
+      .feature-list li {
+        margin-bottom: 0.8rem;
+        color: #fff;
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        border-radius: 20px;
+      }
+
+      .gradient-custom {
+        background-color: $primaryColor;
+      }
+    }
+
+    &:nth-child(1) .pricing-card {
+      background-color: rgba(var(--bs-primary-rgb), 0.85);
+      background: linear-gradient(135deg, $violetLightColor 0%, $violetMediumColor 100%);
+    }
+    &:nth-child(2) .pricing-card {
+      background: linear-gradient(135deg, $violetLightColor 0%, $violetMediumColor 100%);
+    }
+    &:nth-child(3) .pricing-card {
+      $mixedColor: color.mix($primaryColor, $secondaryColor, 70%);
+      background: linear-gradient(135deg, $primaryColor 0%, $mixedColor 100%);
+    }
+  }
+}

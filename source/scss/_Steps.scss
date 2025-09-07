@@ -1,0 +1,60 @@
+@use "sass:color";
+
+.Steps {
+  .bottom-description {
+  }
+
+  .steps-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--bs-box-shadow);
+    color: #fff;
+
+    $bgGradient: linear-gradient(135deg, rgba(var(--violet-light-color-rgb), .85), $violetMediumColor);
+    $iconGradient: linear-gradient(135deg, $violetLightColor, $violetMediumColor);
+    background: $bgGradient;
+    // background-color: $primaryColor;
+    // opacity: .85;
+
+    p {
+      color: #fff;
+      code {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      a {
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .icon-wrapper {
+      font-size: 2.5em;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      background-color: #fff;
+      // background-color: color.mix(#fff, $violetLightColor, 60%);
+      color: $violetMediumColor;
+    }
+
+    .steps-title {
+      // color: #2d3748;
+      // color: $primaryColor;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .steps-text {
+      // color: #718096;
+      font-size: 0.95rem;
+    }
+  }
+}

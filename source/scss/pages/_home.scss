@@ -26,18 +26,6 @@
   }
 }
 
-.shots {
-  padding: 80px 0 !important;
-  > .section-title {
-    z-index: 100;
-    position: relative;
-    > * {
-      color: #fff;
-    }
-  }
-  // .shots-slider {
-}
-
 // Carousels
 .slick-carousel {
   position: relative;
@@ -103,7 +91,7 @@
 }
 
 .pull-top {
-  margin-top: -70px;
+  margin-top: -90px;
 }
 
 .shapes-container {

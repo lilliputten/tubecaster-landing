@@ -1,0 +1,33 @@
+<!-- Features {{{ -->
+<section id="features" class="Features section pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto d-flex align-items-center justify-content-center my-4">
+        <div class="image-content d-flex align-items-center justify-content-center" data-aos="fade-right">
+          <img class="lazy-load img-fluid rounded-circle" src="images/shots/loading-audio-cat-circle.jpg"
+            alt="Audio downloading process powered by cats"
+            width="500"
+            height="500"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 ms-auto align-self-center my-4">
+        <div class="feature-content" data-aos="fade-left">
+          <h2 class="color-primary mb-4">Application Features</h2>
+          <ul class="list-checked">
+            <li>A simple authorization system (using requests). At some point, we decided to restrict access to the bot
+              only to registered users. Now all the new users are required to send a registration request.</li>
+            <li>There is also exists an ability to to pay (via telegram stars) for unlimited access. See <a href="#pricing">pricing details</a>.</li>
+            <li>Actual audio length calculation (via ffprobe packets list command). Sometimes the generated files
+              contain incorrect meta information, in which case the only way out is to get real data using ffprobe.</li>
+            <li>Large audio files splitting on-the fly. If the file size exceeds the telegram API limit (50MB), it is
+              split into several smaller files before being sent to the user.</li>
+            <li>Detecting delays in the processing queue. In this case, repeated messages are periodically (each minute) sent indicating that the request is still being processed.</li>
+            <li><strong>Powered by mighty and cute kitties under the hood.</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- }}} Features -->

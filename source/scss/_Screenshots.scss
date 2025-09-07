@@ -1,0 +1,18 @@
+.Screenshots {
+  padding: 80px 0 !important;
+  > .section-title {
+    z-index: 100;
+    position: relative;
+    > * {
+      color: #fff;
+    }
+  }
+  .slick-dots {
+    li,
+    li.slick-active {
+      button::before {
+        color: #fff;
+      }
+    }
+  }
+}
