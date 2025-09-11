@@ -4,6 +4,7 @@
 
 .News {
   .news-card {
+    overflow: hidden;
     ul, ol, p {
       margin: .5em 0;
     }
