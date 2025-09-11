@@ -2020,6 +2020,9 @@ hr {
 .Features .image-content {
   max-width: 500px;
 }
+.News .news-card {
+  overflow: hidden;
+}
 .News .news-card ul, .News .news-card ol, .News .news-card p {
   margin: 0.5em 0;
 }
