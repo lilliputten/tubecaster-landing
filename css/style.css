@@ -724,7 +724,7 @@ ul.list-checked li::marker {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #c122b4;
+  background-color: #c122b4;
   color: #fff;
   z-index: 999556;
   cursor: pointer;
@@ -2042,5 +2042,13 @@ hr {
 }
 .News .news-card .card-body {
   padding: 1em 1.5em;
+}
+.News .news-card.accented {
+  background-color: #c122b4;
+}
+.News .news-card.accented,
+.News .news-card.accented p,
+.News .news-card.accented .card-title {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
