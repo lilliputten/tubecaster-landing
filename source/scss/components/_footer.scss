@@ -143,11 +143,10 @@
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: $primary-color;
+  background-color: $primary-color;
   color: $light;
   z-index: 999556;
   cursor: pointer;
-  // display: none;
   border-radius: 50%;
   transition: all 250ms;
   &:not(.active) {

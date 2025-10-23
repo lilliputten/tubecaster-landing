@@ -17,7 +17,6 @@
     .details,
     .date {
       font-size: 85%;
-      // font-weight: bold;
       opacity: .5;
     }
     .details {
@@ -25,6 +24,14 @@
     }
     .card-body {
       padding: 1em 1.5em;
+    }
+    &.accented {
+      background-color: $primary-color;
+      &,
+      p,
+      .card-title {
+        color: #fff;
+      }
     }
   }
 }
